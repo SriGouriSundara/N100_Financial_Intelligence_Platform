@@ -1,1 +1,1572 @@
-
+rule_id,severity,table_name,row,message
+DQ-04,WARNING,balancesheet,0,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,2,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,3,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,4,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,5,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,6,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,7,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,8,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,9,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,10,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,11,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,14,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,15,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,16,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,17,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,18,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,19,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,20,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,21,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,22,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,23,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,25,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,26,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,27,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,28,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,29,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,30,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,31,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,32,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,33,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,34,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,35,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,36,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,38,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,39,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,40,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,41,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,42,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,43,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,44,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,45,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,47,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,48,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,49,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,50,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,51,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,52,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,53,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,54,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,55,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,56,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,57,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,58,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,60,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,61,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,62,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,63,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,64,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,65,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,66,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,67,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,68,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,69,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,70,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,71,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,73,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,74,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,75,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,76,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,77,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,78,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,79,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,80,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,81,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,82,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,83,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,84,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,86,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,87,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,88,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,89,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,90,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,91,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,92,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,93,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,94,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,95,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,96,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,97,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,99,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,100,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,101,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,102,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,103,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,104,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,105,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,106,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,107,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,108,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,109,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,110,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,125,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,126,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,127,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,128,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,129,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,130,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,131,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,133,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,134,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,135,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,136,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,137,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,138,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,139,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,140,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,141,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,142,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,143,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,144,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,145,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,146,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,147,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,148,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,149,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,150,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,151,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,152,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,153,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,154,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,155,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,156,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,158,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,159,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,160,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,161,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,162,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,163,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,164,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,165,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,166,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,167,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,168,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,169,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,171,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,172,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,173,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,174,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,175,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,176,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,177,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,178,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,179,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,180,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,181,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,182,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,184,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,185,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,186,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,187,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,188,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,189,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,190,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,191,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,192,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,193,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,195,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,196,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,197,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,198,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,199,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,200,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,201,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,202,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,203,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,204,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,205,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,206,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,207,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,208,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,209,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,210,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,211,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,212,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,213,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,214,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,215,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,216,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,217,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,218,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,220,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,221,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,222,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,223,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,224,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,225,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,226,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,227,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,228,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,229,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,230,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,231,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,233,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,234,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,235,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,236,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,237,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,238,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,239,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,240,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,241,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,242,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,243,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,244,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,246,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,247,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,248,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,249,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,250,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,251,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,252,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,253,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,254,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,255,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,256,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,257,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,259,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,260,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,261,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,262,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,263,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,264,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,265,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,266,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,267,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,268,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,269,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,270,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,272,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,273,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,274,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,275,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,276,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,277,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,278,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,279,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,280,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,281,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,282,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,283,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,285,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,286,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,287,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,288,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,289,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,290,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,291,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,292,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,293,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,294,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,295,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,296,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,297,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,298,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,299,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,300,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,301,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,302,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,303,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,304,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,305,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,306,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,307,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,308,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,310,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,311,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,312,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,313,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,314,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,315,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,316,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,317,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,318,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,319,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,320,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,321,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,323,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,324,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,325,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,326,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,327,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,328,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,329,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,330,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,331,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,332,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,333,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,334,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,336,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,337,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,338,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,339,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,340,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,341,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,342,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,343,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,344,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,345,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,346,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,347,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,349,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,350,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,351,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,352,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,353,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,354,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,355,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,356,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,357,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,358,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,359,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,360,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,362,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,363,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,364,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,365,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,366,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,367,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,368,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,369,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,370,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,371,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,372,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,373,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,375,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,376,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,377,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,378,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,379,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,380,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,381,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,382,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,383,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,384,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,385,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,386,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,388,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,389,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,390,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,391,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,392,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,393,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,394,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,395,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,396,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,397,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,398,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,399,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,401,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,402,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,403,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,404,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,405,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,406,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,407,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,408,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,409,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,410,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,411,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,412,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,414,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,415,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,416,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,417,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,418,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,419,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,420,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,421,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,422,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,423,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,424,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,425,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,427,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,428,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,429,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,430,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,431,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,432,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,433,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,434,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,435,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,436,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,437,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,438,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,440,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,441,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,442,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,443,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,444,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,445,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,446,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,447,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,448,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,449,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,450,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,451,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,453,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,454,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,455,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,456,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,457,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,458,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,459,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,460,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,461,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,463,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,464,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,465,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,466,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,467,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,468,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,469,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,470,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,471,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,472,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,473,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,474,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,476,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,477,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,478,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,479,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,480,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,481,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,482,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,483,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,484,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,485,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,486,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,487,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,489,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,490,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,491,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,492,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,493,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,494,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,495,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,496,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,497,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,498,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,499,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,500,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,501,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,502,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,503,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,504,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,505,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,506,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,507,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,508,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,509,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,510,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,511,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,512,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,514,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,515,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,516,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,517,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,518,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,519,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,520,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,521,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,522,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,523,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,524,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,526,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,527,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,528,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,529,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,530,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,531,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,532,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,533,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,534,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,535,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,536,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,537,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,539,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,540,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,541,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,542,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,543,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,544,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,545,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,546,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,547,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,548,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,549,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,550,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,552,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,553,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,554,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,555,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,556,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,557,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,558,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,559,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,560,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,561,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,562,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,563,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,564,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,565,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,566,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,567,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,568,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,569,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,570,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,571,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,572,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,573,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,574,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,575,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,577,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,578,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,579,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,580,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,581,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,582,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,583,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,584,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,585,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,586,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,587,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,588,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,590,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,591,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,592,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,593,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,594,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,595,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,596,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,597,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,598,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,599,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,600,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,601,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,603,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,604,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,605,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,606,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,607,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,608,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,609,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,610,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,611,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,612,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,613,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,614,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,615,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,616,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,617,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,618,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,619,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,620,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,621,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,622,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,623,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,624,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,625,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,626,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,628,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,629,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,630,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,631,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,632,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,633,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,634,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,635,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,636,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,637,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,638,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,639,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,641,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,642,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,643,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,644,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,645,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,646,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,647,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,648,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,649,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,650,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,652,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,653,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,654,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,655,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,656,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,657,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,658,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,659,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,660,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,661,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,662,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,663,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,665,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,666,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,667,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,668,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,669,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,670,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,671,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,672,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,673,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,674,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,675,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,676,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,678,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,679,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,680,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,681,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,682,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,683,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,684,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,685,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,686,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,687,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,688,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,689,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,691,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,692,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,693,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,694,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,695,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,696,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,697,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,698,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,699,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,700,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,701,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,702,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,704,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,705,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,706,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,707,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,708,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,709,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,710,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,711,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,712,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,713,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,714,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,715,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,717,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,718,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,719,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,720,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,721,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,722,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,723,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,724,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,725,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,726,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,727,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,728,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,730,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,731,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,732,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,733,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,734,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,735,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,736,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,737,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,738,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,739,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,740,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,741,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,743,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,744,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,745,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,746,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,747,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,748,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,749,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,750,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,751,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,752,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,753,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,754,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,756,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,757,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,758,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,759,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,760,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,761,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,762,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,763,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,764,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,765,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,766,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,767,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,769,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,770,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,771,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,772,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,773,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,774,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,775,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,776,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,777,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,778,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,779,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,780,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,782,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,783,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,784,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,785,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,786,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,787,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,788,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,789,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,790,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,791,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,792,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,793,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,795,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,796,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,797,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,798,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,799,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,800,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,801,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,802,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,803,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,804,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,805,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,806,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,808,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,809,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,810,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,811,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,812,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,813,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,814,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,815,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,816,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,817,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,818,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,819,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,825,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,826,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,828,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,829,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,830,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,831,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,832,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,833,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,834,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,835,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,836,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,837,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,838,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,839,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,840,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,841,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,842,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,843,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,844,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,845,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,846,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,847,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,848,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,849,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,850,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,851,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,853,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,854,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,855,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,856,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,857,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,858,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,859,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,860,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,861,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,862,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,863,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,864,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,866,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,867,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,869,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,870,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,871,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,872,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,873,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,874,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,875,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,876,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,877,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,878,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,879,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,880,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,882,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,883,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,884,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,885,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,886,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,887,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,888,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,889,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,890,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,891,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,892,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,893,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,895,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,896,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,897,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,898,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,899,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,900,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,901,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,902,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,903,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,904,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,905,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,906,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,908,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,909,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,910,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,911,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,912,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,913,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,914,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,915,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,916,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,917,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,918,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,919,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,968,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,969,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,970,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,971,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,972,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,973,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,974,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,975,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,976,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,977,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,978,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,979,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,994,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,995,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,996,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,997,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,998,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,999,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1000,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1001,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1002,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1003,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1004,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1005,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1007,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1008,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1009,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1010,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1011,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1012,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1013,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1014,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1015,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1016,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1017,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1018,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1020,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1021,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1022,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1023,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1024,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1025,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1026,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1027,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1028,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1029,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1030,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1031,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1033,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1034,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1035,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1036,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1037,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1038,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1039,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1040,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1041,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1042,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1043,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1044,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1046,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1047,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1048,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1049,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1050,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1051,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1052,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1053,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1054,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1055,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1056,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1057,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1059,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1060,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1061,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1062,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1063,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1064,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1065,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1067,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1068,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1069,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1070,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1071,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1072,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1073,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1074,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1075,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1076,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1077,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1078,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1080,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1081,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1082,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1083,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1084,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1085,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1086,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1087,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1088,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1089,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1090,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1091,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1093,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1094,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1095,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1096,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1097,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1098,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1099,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1100,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1101,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1102,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1103,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1104,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1106,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1107,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1108,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1109,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1110,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1111,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1112,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1113,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1114,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1115,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1116,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1117,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1118,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1119,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1120,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1121,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1122,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1123,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1124,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1125,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1126,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1127,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1128,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1129,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1131,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1132,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1133,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1134,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1135,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1136,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1137,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1138,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1139,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1140,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1141,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1142,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1143,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1144,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1145,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1146,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1147,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1148,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1149,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1150,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1151,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1152,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1153,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1154,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1156,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1157,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1158,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1159,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1160,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1161,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1162,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1163,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1164,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1165,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1166,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1167,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1169,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1170,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1171,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1172,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1173,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1174,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1175,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1176,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1177,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1178,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1179,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1180,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1182,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1183,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1184,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1185,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1186,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1187,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1188,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1189,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1190,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1191,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1192,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1193,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1195,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1196,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1197,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1198,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1199,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1200,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1201,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1202,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1203,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1204,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1205,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1206,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1208,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1209,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1210,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1211,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1212,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1213,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1214,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1215,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1216,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1217,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1218,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1219,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1221,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1222,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1223,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1224,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1225,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1226,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1227,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1228,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1229,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1230,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1231,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1232,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1234,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1235,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1236,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1237,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1238,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1239,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1240,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1241,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1242,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1243,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1244,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1245,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1247,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1248,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1249,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1250,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1251,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1252,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1253,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1254,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1255,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1256,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1257,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1258,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1260,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1261,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1262,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1263,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1264,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1265,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1266,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1267,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1268,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1269,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1270,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1271,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1286,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1287,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1288,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1289,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1290,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1291,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1292,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1293,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1294,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1295,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1296,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1297,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1299,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1300,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1301,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1302,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1303,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1304,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1305,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1306,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1307,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1308,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1309,Balance sheet mismatch > 1%
+DQ-04,WARNING,balancesheet,1310,Balance sheet mismatch > 1%
+DQ-05,WARNING,profitandloss,23,OPM cross-check failed
+DQ-05,WARNING,profitandloss,146,OPM cross-check failed
+DQ-05,WARNING,profitandloss,147,OPM cross-check failed
+DQ-05,WARNING,profitandloss,148,OPM cross-check failed
+DQ-05,WARNING,profitandloss,149,OPM cross-check failed
+DQ-05,WARNING,profitandloss,150,OPM cross-check failed
+DQ-05,WARNING,profitandloss,151,OPM cross-check failed
+DQ-05,WARNING,profitandloss,152,OPM cross-check failed
+DQ-05,WARNING,profitandloss,153,OPM cross-check failed
+DQ-05,WARNING,profitandloss,154,OPM cross-check failed
+DQ-05,WARNING,profitandloss,155,OPM cross-check failed
+DQ-05,WARNING,profitandloss,156,OPM cross-check failed
+DQ-05,WARNING,profitandloss,157,OPM cross-check failed
+DQ-05,WARNING,profitandloss,158,OPM cross-check failed
+DQ-05,WARNING,profitandloss,185,OPM cross-check failed
+DQ-05,WARNING,profitandloss,186,OPM cross-check failed
+DQ-05,WARNING,profitandloss,187,OPM cross-check failed
+DQ-05,WARNING,profitandloss,188,OPM cross-check failed
+DQ-05,WARNING,profitandloss,189,OPM cross-check failed
+DQ-05,WARNING,profitandloss,190,OPM cross-check failed
+DQ-05,WARNING,profitandloss,191,OPM cross-check failed
+DQ-05,WARNING,profitandloss,192,OPM cross-check failed
+DQ-05,WARNING,profitandloss,193,OPM cross-check failed
+DQ-05,WARNING,profitandloss,194,OPM cross-check failed
+DQ-05,WARNING,profitandloss,195,OPM cross-check failed
+DQ-05,WARNING,profitandloss,196,OPM cross-check failed
+DQ-05,WARNING,profitandloss,197,OPM cross-check failed
+DQ-05,WARNING,profitandloss,198,OPM cross-check failed
+DQ-05,WARNING,profitandloss,199,OPM cross-check failed
+DQ-05,WARNING,profitandloss,200,OPM cross-check failed
+DQ-05,WARNING,profitandloss,201,OPM cross-check failed
+DQ-05,WARNING,profitandloss,202,OPM cross-check failed
+DQ-05,WARNING,profitandloss,203,OPM cross-check failed
+DQ-05,WARNING,profitandloss,204,OPM cross-check failed
+DQ-05,WARNING,profitandloss,205,OPM cross-check failed
+DQ-05,WARNING,profitandloss,206,OPM cross-check failed
+DQ-05,WARNING,profitandloss,207,OPM cross-check failed
+DQ-05,WARNING,profitandloss,208,OPM cross-check failed
+DQ-05,WARNING,profitandloss,287,OPM cross-check failed
+DQ-05,WARNING,profitandloss,288,OPM cross-check failed
+DQ-05,WARNING,profitandloss,289,OPM cross-check failed
+DQ-05,WARNING,profitandloss,290,OPM cross-check failed
+DQ-05,WARNING,profitandloss,291,OPM cross-check failed
+DQ-05,WARNING,profitandloss,292,OPM cross-check failed
+DQ-05,WARNING,profitandloss,293,OPM cross-check failed
+DQ-05,WARNING,profitandloss,294,OPM cross-check failed
+DQ-05,WARNING,profitandloss,295,OPM cross-check failed
+DQ-05,WARNING,profitandloss,296,OPM cross-check failed
+DQ-05,WARNING,profitandloss,297,OPM cross-check failed
+DQ-05,WARNING,profitandloss,298,OPM cross-check failed
+DQ-05,WARNING,profitandloss,299,OPM cross-check failed
+DQ-05,WARNING,profitandloss,300,OPM cross-check failed
+DQ-05,WARNING,profitandloss,301,OPM cross-check failed
+DQ-05,WARNING,profitandloss,302,OPM cross-check failed
+DQ-05,WARNING,profitandloss,303,OPM cross-check failed
+DQ-05,WARNING,profitandloss,304,OPM cross-check failed
+DQ-05,WARNING,profitandloss,305,OPM cross-check failed
+DQ-05,WARNING,profitandloss,306,OPM cross-check failed
+DQ-05,WARNING,profitandloss,307,OPM cross-check failed
+DQ-05,WARNING,profitandloss,308,OPM cross-check failed
+DQ-05,WARNING,profitandloss,309,OPM cross-check failed
+DQ-05,WARNING,profitandloss,310,OPM cross-check failed
+DQ-05,WARNING,profitandloss,311,OPM cross-check failed
+DQ-05,WARNING,profitandloss,312,OPM cross-check failed
+DQ-05,WARNING,profitandloss,313,OPM cross-check failed
+DQ-05,WARNING,profitandloss,314,OPM cross-check failed
+DQ-05,WARNING,profitandloss,315,OPM cross-check failed
+DQ-05,WARNING,profitandloss,316,OPM cross-check failed
+DQ-05,WARNING,profitandloss,317,OPM cross-check failed
+DQ-05,WARNING,profitandloss,318,OPM cross-check failed
+DQ-05,WARNING,profitandloss,319,OPM cross-check failed
+DQ-05,WARNING,profitandloss,320,OPM cross-check failed
+DQ-05,WARNING,profitandloss,321,OPM cross-check failed
+DQ-05,WARNING,profitandloss,322,OPM cross-check failed
+DQ-05,WARNING,profitandloss,323,OPM cross-check failed
+DQ-05,WARNING,profitandloss,324,OPM cross-check failed
+DQ-05,WARNING,profitandloss,325,OPM cross-check failed
+DQ-05,WARNING,profitandloss,326,OPM cross-check failed
+DQ-05,WARNING,profitandloss,327,OPM cross-check failed
+DQ-05,WARNING,profitandloss,328,OPM cross-check failed
+DQ-05,WARNING,profitandloss,329,OPM cross-check failed
+DQ-05,WARNING,profitandloss,330,OPM cross-check failed
+DQ-05,WARNING,profitandloss,331,OPM cross-check failed
+DQ-05,WARNING,profitandloss,332,OPM cross-check failed
+DQ-05,WARNING,profitandloss,333,OPM cross-check failed
+DQ-05,WARNING,profitandloss,334,OPM cross-check failed
+DQ-05,WARNING,profitandloss,335,OPM cross-check failed
+DQ-05,WARNING,profitandloss,336,OPM cross-check failed
+DQ-05,WARNING,profitandloss,337,OPM cross-check failed
+DQ-05,WARNING,profitandloss,338,OPM cross-check failed
+DQ-05,WARNING,profitandloss,495,OPM cross-check failed
+DQ-05,WARNING,profitandloss,496,OPM cross-check failed
+DQ-05,WARNING,profitandloss,497,OPM cross-check failed
+DQ-05,WARNING,profitandloss,498,OPM cross-check failed
+DQ-05,WARNING,profitandloss,499,OPM cross-check failed
+DQ-05,WARNING,profitandloss,500,OPM cross-check failed
+DQ-05,WARNING,profitandloss,501,OPM cross-check failed
+DQ-05,WARNING,profitandloss,502,OPM cross-check failed
+DQ-05,WARNING,profitandloss,503,OPM cross-check failed
+DQ-05,WARNING,profitandloss,504,OPM cross-check failed
+DQ-05,WARNING,profitandloss,505,OPM cross-check failed
+DQ-05,WARNING,profitandloss,506,OPM cross-check failed
+DQ-05,WARNING,profitandloss,507,OPM cross-check failed
+DQ-05,WARNING,profitandloss,508,OPM cross-check failed
+DQ-05,WARNING,profitandloss,509,OPM cross-check failed
+DQ-05,WARNING,profitandloss,510,OPM cross-check failed
+DQ-05,WARNING,profitandloss,511,OPM cross-check failed
+DQ-05,WARNING,profitandloss,512,OPM cross-check failed
+DQ-05,WARNING,profitandloss,513,OPM cross-check failed
+DQ-05,WARNING,profitandloss,514,OPM cross-check failed
+DQ-05,WARNING,profitandloss,515,OPM cross-check failed
+DQ-05,WARNING,profitandloss,516,OPM cross-check failed
+DQ-05,WARNING,profitandloss,517,OPM cross-check failed
+DQ-05,WARNING,profitandloss,518,OPM cross-check failed
+DQ-05,WARNING,profitandloss,519,OPM cross-check failed
+DQ-05,WARNING,profitandloss,520,OPM cross-check failed
+DQ-05,WARNING,profitandloss,521,OPM cross-check failed
+DQ-05,WARNING,profitandloss,522,OPM cross-check failed
+DQ-05,WARNING,profitandloss,523,OPM cross-check failed
+DQ-05,WARNING,profitandloss,524,OPM cross-check failed
+DQ-05,WARNING,profitandloss,525,OPM cross-check failed
+DQ-05,WARNING,profitandloss,526,OPM cross-check failed
+DQ-05,WARNING,profitandloss,527,OPM cross-check failed
+DQ-05,WARNING,profitandloss,528,OPM cross-check failed
+DQ-05,WARNING,profitandloss,529,OPM cross-check failed
+DQ-05,WARNING,profitandloss,530,OPM cross-check failed
+DQ-05,WARNING,profitandloss,531,OPM cross-check failed
+DQ-05,WARNING,profitandloss,532,OPM cross-check failed
+DQ-05,WARNING,profitandloss,533,OPM cross-check failed
+DQ-05,WARNING,profitandloss,534,OPM cross-check failed
+DQ-05,WARNING,profitandloss,535,OPM cross-check failed
+DQ-05,WARNING,profitandloss,536,OPM cross-check failed
+DQ-05,WARNING,profitandloss,537,OPM cross-check failed
+DQ-05,WARNING,profitandloss,538,OPM cross-check failed
+DQ-05,WARNING,profitandloss,539,OPM cross-check failed
+DQ-05,WARNING,profitandloss,540,OPM cross-check failed
+DQ-05,WARNING,profitandloss,541,OPM cross-check failed
+DQ-05,WARNING,profitandloss,542,OPM cross-check failed
+DQ-05,WARNING,profitandloss,543,OPM cross-check failed
+DQ-05,WARNING,profitandloss,544,OPM cross-check failed
+DQ-05,WARNING,profitandloss,545,OPM cross-check failed
+DQ-05,WARNING,profitandloss,546,OPM cross-check failed
+DQ-05,WARNING,profitandloss,547,OPM cross-check failed
+DQ-05,WARNING,profitandloss,548,OPM cross-check failed
+DQ-05,WARNING,profitandloss,549,OPM cross-check failed
+DQ-05,WARNING,profitandloss,550,OPM cross-check failed
+DQ-05,WARNING,profitandloss,551,OPM cross-check failed
+DQ-05,WARNING,profitandloss,552,OPM cross-check failed
+DQ-05,WARNING,profitandloss,553,OPM cross-check failed
+DQ-05,WARNING,profitandloss,554,OPM cross-check failed
+DQ-05,WARNING,profitandloss,555,OPM cross-check failed
+DQ-05,WARNING,profitandloss,556,OPM cross-check failed
+DQ-05,WARNING,profitandloss,557,OPM cross-check failed
+DQ-05,WARNING,profitandloss,558,OPM cross-check failed
+DQ-05,WARNING,profitandloss,559,OPM cross-check failed
+DQ-05,WARNING,profitandloss,560,OPM cross-check failed
+DQ-05,WARNING,profitandloss,561,OPM cross-check failed
+DQ-05,WARNING,profitandloss,562,OPM cross-check failed
+DQ-05,WARNING,profitandloss,563,OPM cross-check failed
+DQ-05,WARNING,profitandloss,564,OPM cross-check failed
+DQ-05,WARNING,profitandloss,565,OPM cross-check failed
+DQ-05,WARNING,profitandloss,566,OPM cross-check failed
+DQ-05,WARNING,profitandloss,567,OPM cross-check failed
+DQ-05,WARNING,profitandloss,568,OPM cross-check failed
+DQ-05,WARNING,profitandloss,569,OPM cross-check failed
+DQ-05,WARNING,profitandloss,570,OPM cross-check failed
+DQ-05,WARNING,profitandloss,571,OPM cross-check failed
+DQ-05,WARNING,profitandloss,572,OPM cross-check failed
+DQ-05,WARNING,profitandloss,573,OPM cross-check failed
+DQ-05,WARNING,profitandloss,574,OPM cross-check failed
+DQ-05,WARNING,profitandloss,575,OPM cross-check failed
+DQ-05,WARNING,profitandloss,576,OPM cross-check failed
+DQ-05,WARNING,profitandloss,577,OPM cross-check failed
+DQ-05,WARNING,profitandloss,578,OPM cross-check failed
+DQ-05,WARNING,profitandloss,579,OPM cross-check failed
+DQ-05,WARNING,profitandloss,580,OPM cross-check failed
+DQ-05,WARNING,profitandloss,581,OPM cross-check failed
+DQ-05,WARNING,profitandloss,582,OPM cross-check failed
+DQ-05,WARNING,profitandloss,583,OPM cross-check failed
+DQ-05,WARNING,profitandloss,584,OPM cross-check failed
+DQ-05,WARNING,profitandloss,585,OPM cross-check failed
+DQ-05,WARNING,profitandloss,586,OPM cross-check failed
+DQ-05,WARNING,profitandloss,587,OPM cross-check failed
+DQ-05,WARNING,profitandloss,588,OPM cross-check failed
+DQ-05,WARNING,profitandloss,589,OPM cross-check failed
+DQ-05,WARNING,profitandloss,590,OPM cross-check failed
+DQ-05,WARNING,profitandloss,591,OPM cross-check failed
+DQ-05,WARNING,profitandloss,592,OPM cross-check failed
+DQ-05,WARNING,profitandloss,593,OPM cross-check failed
+DQ-05,WARNING,profitandloss,594,OPM cross-check failed
+DQ-05,WARNING,profitandloss,595,OPM cross-check failed
+DQ-05,WARNING,profitandloss,596,OPM cross-check failed
+DQ-05,WARNING,profitandloss,597,OPM cross-check failed
+DQ-05,WARNING,profitandloss,598,OPM cross-check failed
+DQ-05,WARNING,profitandloss,599,OPM cross-check failed
+DQ-05,WARNING,profitandloss,600,OPM cross-check failed
+DQ-05,WARNING,profitandloss,601,OPM cross-check failed
+DQ-05,WARNING,profitandloss,602,OPM cross-check failed
+DQ-05,WARNING,profitandloss,603,OPM cross-check failed
+DQ-05,WARNING,profitandloss,604,OPM cross-check failed
+DQ-05,WARNING,profitandloss,605,OPM cross-check failed
+DQ-05,WARNING,profitandloss,606,OPM cross-check failed
+DQ-05,WARNING,profitandloss,607,OPM cross-check failed
+DQ-05,WARNING,profitandloss,608,OPM cross-check failed
+DQ-05,WARNING,profitandloss,609,OPM cross-check failed
+DQ-05,WARNING,profitandloss,610,OPM cross-check failed
+DQ-05,WARNING,profitandloss,687,OPM cross-check failed
+DQ-05,WARNING,profitandloss,716,OPM cross-check failed
+DQ-05,WARNING,profitandloss,717,OPM cross-check failed
+DQ-05,WARNING,profitandloss,718,OPM cross-check failed
+DQ-05,WARNING,profitandloss,719,OPM cross-check failed
+DQ-05,WARNING,profitandloss,720,OPM cross-check failed
+DQ-05,WARNING,profitandloss,721,OPM cross-check failed
+DQ-05,WARNING,profitandloss,722,OPM cross-check failed
+DQ-05,WARNING,profitandloss,723,OPM cross-check failed
+DQ-05,WARNING,profitandloss,724,OPM cross-check failed
+DQ-05,WARNING,profitandloss,725,OPM cross-check failed
+DQ-05,WARNING,profitandloss,726,OPM cross-check failed
+DQ-05,WARNING,profitandloss,727,OPM cross-check failed
+DQ-05,WARNING,profitandloss,728,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1032,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1263,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1264,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1265,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1266,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1267,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1268,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1269,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1270,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1271,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1272,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1273,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1274,OPM cross-check failed
+DQ-05,WARNING,profitandloss,1275,OPM cross-check failed
+DQ-06,WARNING,profitandloss,13,Sales must be positive
+DQ-11,WARNING,companies,93,Duplicate company name
+DQ-11,WARNING,companies,94,Duplicate company name
+DQ-14,WARNING,financial_ratios,161,Ratio out of range
+DQ-14,WARNING,financial_ratios,162,Ratio out of range
+DQ-14,WARNING,financial_ratios,163,Ratio out of range
+DQ-14,WARNING,financial_ratios,164,Ratio out of range
+DQ-14,WARNING,financial_ratios,165,Ratio out of range
+DQ-14,WARNING,financial_ratios,166,Ratio out of range
+DQ-14,WARNING,financial_ratios,167,Ratio out of range
+DQ-14,WARNING,financial_ratios,168,Ratio out of range
+DQ-14,WARNING,financial_ratios,169,Ratio out of range
+DQ-14,WARNING,financial_ratios,170,Ratio out of range
+DQ-14,WARNING,financial_ratios,171,Ratio out of range
+DQ-14,WARNING,financial_ratios,172,Ratio out of range
+DQ-14,WARNING,financial_ratios,197,Ratio out of range
+DQ-14,WARNING,financial_ratios,198,Ratio out of range
+DQ-14,WARNING,financial_ratios,199,Ratio out of range
+DQ-14,WARNING,financial_ratios,200,Ratio out of range
+DQ-14,WARNING,financial_ratios,201,Ratio out of range
+DQ-14,WARNING,financial_ratios,202,Ratio out of range
+DQ-14,WARNING,financial_ratios,203,Ratio out of range
+DQ-14,WARNING,financial_ratios,204,Ratio out of range
+DQ-14,WARNING,financial_ratios,205,Ratio out of range
+DQ-14,WARNING,financial_ratios,206,Ratio out of range
+DQ-14,WARNING,financial_ratios,207,Ratio out of range
+DQ-14,WARNING,financial_ratios,210,Ratio out of range
+DQ-14,WARNING,financial_ratios,211,Ratio out of range
+DQ-14,WARNING,financial_ratios,212,Ratio out of range
+DQ-14,WARNING,financial_ratios,213,Ratio out of range
+DQ-14,WARNING,financial_ratios,214,Ratio out of range
+DQ-14,WARNING,financial_ratios,215,Ratio out of range
+DQ-14,WARNING,financial_ratios,216,Ratio out of range
+DQ-14,WARNING,financial_ratios,217,Ratio out of range
+DQ-14,WARNING,financial_ratios,218,Ratio out of range
+DQ-14,WARNING,financial_ratios,292,Ratio out of range
+DQ-14,WARNING,financial_ratios,293,Ratio out of range
+DQ-14,WARNING,financial_ratios,294,Ratio out of range
+DQ-14,WARNING,financial_ratios,295,Ratio out of range
+DQ-14,WARNING,financial_ratios,296,Ratio out of range
+DQ-14,WARNING,financial_ratios,297,Ratio out of range
+DQ-14,WARNING,financial_ratios,298,Ratio out of range
+DQ-14,WARNING,financial_ratios,299,Ratio out of range
+DQ-14,WARNING,financial_ratios,300,Ratio out of range
+DQ-14,WARNING,financial_ratios,301,Ratio out of range
+DQ-14,WARNING,financial_ratios,302,Ratio out of range
+DQ-14,WARNING,financial_ratios,307,Ratio out of range
+DQ-14,WARNING,financial_ratios,308,Ratio out of range
+DQ-14,WARNING,financial_ratios,309,Ratio out of range
+DQ-14,WARNING,financial_ratios,310,Ratio out of range
+DQ-14,WARNING,financial_ratios,311,Ratio out of range
+DQ-14,WARNING,financial_ratios,312,Ratio out of range
+DQ-14,WARNING,financial_ratios,313,Ratio out of range
+DQ-14,WARNING,financial_ratios,314,Ratio out of range
+DQ-14,WARNING,financial_ratios,315,Ratio out of range
+DQ-14,WARNING,financial_ratios,316,Ratio out of range
+DQ-14,WARNING,financial_ratios,317,Ratio out of range
+DQ-14,WARNING,financial_ratios,318,Ratio out of range
+DQ-14,WARNING,financial_ratios,319,Ratio out of range
+DQ-14,WARNING,financial_ratios,320,Ratio out of range
+DQ-14,WARNING,financial_ratios,321,Ratio out of range
+DQ-14,WARNING,financial_ratios,322,Ratio out of range
+DQ-14,WARNING,financial_ratios,323,Ratio out of range
+DQ-14,WARNING,financial_ratios,324,Ratio out of range
+DQ-14,WARNING,financial_ratios,325,Ratio out of range
+DQ-14,WARNING,financial_ratios,326,Ratio out of range
+DQ-14,WARNING,financial_ratios,327,Ratio out of range
+DQ-14,WARNING,financial_ratios,328,Ratio out of range
+DQ-14,WARNING,financial_ratios,329,Ratio out of range
+DQ-14,WARNING,financial_ratios,330,Ratio out of range
+DQ-14,WARNING,financial_ratios,331,Ratio out of range
+DQ-14,WARNING,financial_ratios,332,Ratio out of range
+DQ-14,WARNING,financial_ratios,333,Ratio out of range
+DQ-14,WARNING,financial_ratios,334,Ratio out of range
+DQ-14,WARNING,financial_ratios,335,Ratio out of range
+DQ-14,WARNING,financial_ratios,336,Ratio out of range
+DQ-14,WARNING,financial_ratios,337,Ratio out of range
+DQ-14,WARNING,financial_ratios,338,Ratio out of range
+DQ-14,WARNING,financial_ratios,478,Ratio out of range
+DQ-14,WARNING,financial_ratios,479,Ratio out of range
+DQ-14,WARNING,financial_ratios,480,Ratio out of range
+DQ-14,WARNING,financial_ratios,481,Ratio out of range
+DQ-14,WARNING,financial_ratios,482,Ratio out of range
+DQ-14,WARNING,financial_ratios,483,Ratio out of range
+DQ-14,WARNING,financial_ratios,484,Ratio out of range
+DQ-14,WARNING,financial_ratios,485,Ratio out of range
+DQ-14,WARNING,financial_ratios,486,Ratio out of range
+DQ-14,WARNING,financial_ratios,487,Ratio out of range
+DQ-14,WARNING,financial_ratios,488,Ratio out of range
+DQ-14,WARNING,financial_ratios,489,Ratio out of range
+DQ-14,WARNING,financial_ratios,495,Ratio out of range
+DQ-14,WARNING,financial_ratios,496,Ratio out of range
+DQ-14,WARNING,financial_ratios,497,Ratio out of range
+DQ-14,WARNING,financial_ratios,498,Ratio out of range
+DQ-14,WARNING,financial_ratios,502,Ratio out of range
+DQ-14,WARNING,financial_ratios,503,Ratio out of range
+DQ-14,WARNING,financial_ratios,504,Ratio out of range
+DQ-14,WARNING,financial_ratios,505,Ratio out of range
+DQ-14,WARNING,financial_ratios,506,Ratio out of range
+DQ-14,WARNING,financial_ratios,507,Ratio out of range
+DQ-14,WARNING,financial_ratios,508,Ratio out of range
+DQ-14,WARNING,financial_ratios,509,Ratio out of range
+DQ-14,WARNING,financial_ratios,510,Ratio out of range
+DQ-14,WARNING,financial_ratios,511,Ratio out of range
+DQ-14,WARNING,financial_ratios,512,Ratio out of range
+DQ-14,WARNING,financial_ratios,513,Ratio out of range
+DQ-14,WARNING,financial_ratios,514,Ratio out of range
+DQ-14,WARNING,financial_ratios,515,Ratio out of range
+DQ-14,WARNING,financial_ratios,516,Ratio out of range
+DQ-14,WARNING,financial_ratios,517,Ratio out of range
+DQ-14,WARNING,financial_ratios,518,Ratio out of range
+DQ-14,WARNING,financial_ratios,519,Ratio out of range
+DQ-14,WARNING,financial_ratios,520,Ratio out of range
+DQ-14,WARNING,financial_ratios,521,Ratio out of range
+DQ-14,WARNING,financial_ratios,522,Ratio out of range
+DQ-14,WARNING,financial_ratios,523,Ratio out of range
+DQ-14,WARNING,financial_ratios,524,Ratio out of range
+DQ-14,WARNING,financial_ratios,525,Ratio out of range
+DQ-14,WARNING,financial_ratios,526,Ratio out of range
+DQ-14,WARNING,financial_ratios,527,Ratio out of range
+DQ-14,WARNING,financial_ratios,528,Ratio out of range
+DQ-14,WARNING,financial_ratios,529,Ratio out of range
+DQ-14,WARNING,financial_ratios,530,Ratio out of range
+DQ-14,WARNING,financial_ratios,531,Ratio out of range
+DQ-14,WARNING,financial_ratios,532,Ratio out of range
+DQ-14,WARNING,financial_ratios,533,Ratio out of range
+DQ-14,WARNING,financial_ratios,534,Ratio out of range
+DQ-14,WARNING,financial_ratios,535,Ratio out of range
+DQ-14,WARNING,financial_ratios,536,Ratio out of range
+DQ-14,WARNING,financial_ratios,537,Ratio out of range
+DQ-14,WARNING,financial_ratios,538,Ratio out of range
+DQ-14,WARNING,financial_ratios,539,Ratio out of range
+DQ-14,WARNING,financial_ratios,540,Ratio out of range
+DQ-14,WARNING,financial_ratios,541,Ratio out of range
+DQ-14,WARNING,financial_ratios,542,Ratio out of range
+DQ-14,WARNING,financial_ratios,543,Ratio out of range
+DQ-14,WARNING,financial_ratios,544,Ratio out of range
+DQ-14,WARNING,financial_ratios,545,Ratio out of range
+DQ-14,WARNING,financial_ratios,546,Ratio out of range
+DQ-14,WARNING,financial_ratios,547,Ratio out of range
+DQ-14,WARNING,financial_ratios,548,Ratio out of range
+DQ-14,WARNING,financial_ratios,549,Ratio out of range
+DQ-14,WARNING,financial_ratios,550,Ratio out of range
+DQ-14,WARNING,financial_ratios,551,Ratio out of range
+DQ-14,WARNING,financial_ratios,554,Ratio out of range
+DQ-14,WARNING,financial_ratios,555,Ratio out of range
+DQ-14,WARNING,financial_ratios,556,Ratio out of range
+DQ-14,WARNING,financial_ratios,557,Ratio out of range
+DQ-14,WARNING,financial_ratios,558,Ratio out of range
+DQ-14,WARNING,financial_ratios,559,Ratio out of range
+DQ-14,WARNING,financial_ratios,560,Ratio out of range
+DQ-14,WARNING,financial_ratios,562,Ratio out of range
+DQ-14,WARNING,financial_ratios,563,Ratio out of range
+DQ-14,WARNING,financial_ratios,564,Ratio out of range
+DQ-14,WARNING,financial_ratios,565,Ratio out of range
+DQ-14,WARNING,financial_ratios,566,Ratio out of range
+DQ-14,WARNING,financial_ratios,568,Ratio out of range
+DQ-14,WARNING,financial_ratios,569,Ratio out of range
+DQ-14,WARNING,financial_ratios,570,Ratio out of range
+DQ-14,WARNING,financial_ratios,571,Ratio out of range
+DQ-14,WARNING,financial_ratios,572,Ratio out of range
+DQ-14,WARNING,financial_ratios,579,Ratio out of range
+DQ-14,WARNING,financial_ratios,580,Ratio out of range
+DQ-14,WARNING,financial_ratios,581,Ratio out of range
+DQ-14,WARNING,financial_ratios,582,Ratio out of range
+DQ-14,WARNING,financial_ratios,583,Ratio out of range
+DQ-14,WARNING,financial_ratios,584,Ratio out of range
+DQ-14,WARNING,financial_ratios,678,Ratio out of range
+DQ-14,WARNING,financial_ratios,679,Ratio out of range
+DQ-14,WARNING,financial_ratios,680,Ratio out of range
+DQ-14,WARNING,financial_ratios,681,Ratio out of range
+DQ-14,WARNING,financial_ratios,682,Ratio out of range
+DQ-14,WARNING,financial_ratios,683,Ratio out of range
+DQ-14,WARNING,financial_ratios,684,Ratio out of range
+DQ-14,WARNING,financial_ratios,685,Ratio out of range
+DQ-14,WARNING,financial_ratios,686,Ratio out of range
+DQ-14,WARNING,financial_ratios,687,Ratio out of range
+DQ-14,WARNING,financial_ratios,688,Ratio out of range
+DQ-14,WARNING,financial_ratios,689,Ratio out of range
+DQ-14,WARNING,financial_ratios,1174,Ratio out of range
+DQ-14,WARNING,financial_ratios,1175,Ratio out of range
+DQ-14,WARNING,financial_ratios,1176,Ratio out of range
+DQ-14,WARNING,financial_ratios,1177,Ratio out of range
+DQ-14,WARNING,financial_ratios,1178,Ratio out of range
+DQ-14,WARNING,financial_ratios,1179,Ratio out of range
+DQ-14,WARNING,financial_ratios,1182,Ratio out of range
+DQ-14,WARNING,financial_ratios,1183,Ratio out of range
+DQ-15,WARNING,companies,91,Website missing
+DQ-15,WARNING,companies,92,Website missing
+DQ-15,WARNING,companies,93,Website missing
+DQ-15,WARNING,companies,94,Website missing
+DQ-15,WARNING,companies,95,Website missing
+DQ-15,WARNING,companies,96,Website missing
+DQ-15,WARNING,companies,97,Website missing
+DQ-15,WARNING,companies,98,Website missing
+DQ-15,WARNING,companies,99,Website missing
+DQ-16,WARNING,companies,91,NSE profile missing
+DQ-16,WARNING,companies,92,NSE profile missing
+DQ-16,WARNING,companies,93,NSE profile missing
+DQ-16,WARNING,companies,94,NSE profile missing
+DQ-16,WARNING,companies,95,NSE profile missing
+DQ-16,WARNING,companies,96,NSE profile missing
+DQ-16,WARNING,companies,97,NSE profile missing
+DQ-16,WARNING,companies,98,NSE profile missing
+DQ-16,WARNING,companies,99,NSE profile missing

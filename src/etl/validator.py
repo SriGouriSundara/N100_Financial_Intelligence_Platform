@@ -115,139 +115,281 @@ def save_failures(failures,
 
 def dq04_balance_sheet_check(df):
 
+    validation_failures = []
+
+    valid_rows = df[df["total_assets"] != 0]
+
     equity = (
-        df["equity_capital"]
-        + df["reserves"]
+        valid_rows["equity_capital"]
+        + valid_rows["reserves"]
     )
 
     difference_pct = abs(
-        df["total_assets"]
+        valid_rows["total_assets"]
         - (
-            df["total_liabilities"]
+            valid_rows["total_liabilities"]
             + equity
         )
-    ) / df["total_assets"]
+    ) / valid_rows["total_assets"]
 
-    failures = df[
+    failed_rows = valid_rows[
         difference_pct > 0.01
     ]
 
-    return failures
+    for idx, row in failed_rows.iterrows():
 
+        validation_failures.append({
+            "rule_id": "DQ-04",
+            "severity": "WARNING",
+            "table_name": "balancesheet",
+            "row": idx,
+            "message": "Balance sheet mismatch > 1%"
+        })
+
+    return validation_failures
 def dq05_opm_crosscheck(df):
 
+    validation_failures = []
+
+    valid_rows = df[df["sales"] != 0]
+
     calculated_opm = (
-        df["operating_profit"]
-        / df["sales"]
+        valid_rows["operating_profit"]
+        / valid_rows["sales"]
     ) * 100
 
-    failures = df[
+    failed_rows = valid_rows[
         abs(
             calculated_opm
-            - df["opm_percentage"]
+            - valid_rows["opm_percentage"]
         ) > 1
     ]
 
-    return failures
+    for idx, row in failed_rows.iterrows():
+
+        validation_failures.append({
+            "rule_id": "DQ-05",
+            "severity": "WARNING",
+            "table_name": "profitandloss",
+            "row": idx,
+            "message": "OPM cross-check failed"
+        })
+
+    return validation_failures
 
 def dq06_positive_sales(df):
 
-    failures = df[
-        df["sales"] <= 0
-    ]
+    validation_failures = []
 
-    return failures
+    failed_rows = df[df["sales"] <= 0]
 
+    for idx, row in failed_rows.iterrows():
+        validation_failures.append({
+            "rule_id": "DQ-06",
+            "severity": "WARNING",
+            "table_name": "profitandloss",
+            "row": idx,
+            "message": "Sales must be positive"
+        })
+
+    return validation_failures
 
 def dq07_company_id_not_null(df):
 
-    failures = df[
-        df["company_id"].isna()
-    ]
+    validation_failures = []
 
-    return failures
+    failed_rows = df[df["company_id"].isna()]
+
+    for idx, row in failed_rows.iterrows():
+        validation_failures.append({
+            "rule_id": "DQ-07",
+            "severity": "WARNING",
+            "table_name": "profitandloss",
+            "row": idx,
+            "message": "Company ID is null"
+        })
+
+    return validation_failures
 
 def dq08_year_not_null(df):
 
-    failures = df[
-        df["year"].isna()
-    ]
+    validation_failures = []
 
-    return failures
+    failed_rows = df[df["year"].isna()]
+
+    for idx, row in failed_rows.iterrows():
+        validation_failures.append({
+            "rule_id": "DQ-08",
+            "severity": "WARNING",
+            "table_name": "profitandloss",
+            "row": idx,
+            "message": "Year is null"
+        })
+
+    return validation_failures
 
 def dq09_sales_not_null(df):
 
-    failures = df[
-        df["sales"].isna()
-    ]
+    validation_failures = []
 
-    return failures
+    failed_rows = df[df["sales"].isna()]
+
+    for idx, row in failed_rows.iterrows():
+        validation_failures.append({
+            "rule_id": "DQ-09",
+            "severity": "WARNING",
+            "table_name": "profitandloss",
+            "row": idx,
+            "message": "Sales is null"
+        })
+
+    return validation_failures
 
 def dq10_valid_year_range(df):
 
-    failures = df[
-        (df["year"] < 2000)
-        | (df["year"] > 2026)
+    validation_failures = []
+
+    year_numeric = pd.to_numeric(
+        df["year"],
+        errors="coerce"
+    )
+
+    failed_rows = df[
+        (year_numeric < 2000)
+        | (year_numeric > 2026)
     ]
 
-    return failures
+    for idx, row in failed_rows.iterrows():
+        validation_failures.append({
+            "rule_id": "DQ-10",
+            "severity": "WARNING",
+            "table_name": "profitandloss",
+            "row": idx,
+            "message": "Invalid year range"
+        })
+
+    return validation_failures
 
 def dq11_duplicate_company_names(df):
 
-    failures = df[
+    validation_failures = []
+
+    failed_rows = df[
         df.duplicated(
             subset=["company_name"],
             keep=False
         )
     ]
 
-    return failures
+    for idx, row in failed_rows.iterrows():
+        validation_failures.append({
+            "rule_id": "DQ-11",
+            "severity": "WARNING",
+            "table_name": "companies",
+            "row": idx,
+            "message": "Duplicate company name"
+        })
+
+    return validation_failures
 
 def dq12_debt_positive(df):
 
-    failures = df[
+    validation_failures = []
+
+    failed_rows = df[
         df["total_debt_cr"] < 0
     ]
 
-    return failures
+    for idx, row in failed_rows.iterrows():
+        validation_failures.append({
+            "rule_id": "DQ-12",
+            "severity": "WARNING",
+            "table_name": "financial_ratios",
+            "row": idx,
+            "message": "Negative debt value"
+        })
+
+    return validation_failures
 
 def dq13_stock_price_positive(df):
 
-    failures = df[
+    validation_failures = []
+
+    failed_rows = df[
         df["close_price"] <= 0
     ]
 
-    return failures
+    for idx, row in failed_rows.iterrows():
+        validation_failures.append({
+            "rule_id": "DQ-13",
+            "severity": "WARNING",
+            "table_name": "stock_prices",
+            "row": idx,
+            "message": "Invalid stock price"
+        })
+
+    return validation_failures
 
 def dq14_ratio_range(df):
 
-    failures = df[
+    validation_failures = []
+
+    failed_rows = df[
         (
-            df["operating_profit_margin_pct"]
-            < -100
+            df["operating_profit_margin_pct"] < -100
         )
         |
         (
-            df["operating_profit_margin_pct"]
-            > 1000
+            df["operating_profit_margin_pct"] > 1000
         )
     ]
 
-    return failures
+    for idx, row in failed_rows.iterrows():
+        validation_failures.append({
+            "rule_id": "DQ-14",
+            "severity": "WARNING",
+            "table_name": "financial_ratios",
+            "row": idx,
+            "message": "Ratio out of range"
+        })
+
+    return validation_failures
 
 def dq15_website_exists(df):
 
-    failures = df[
+    validation_failures = []
+
+    failed_rows = df[
         df["website"].isna()
     ]
 
-    return failures
+    for idx, row in failed_rows.iterrows():
+        validation_failures.append({
+            "rule_id": "DQ-15",
+            "severity": "WARNING",
+            "table_name": "companies",
+            "row": idx,
+            "message": "Website missing"
+        })
+
+    return validation_failures
 
 def dq16_nse_profile_exists(df):
 
-    failures = df[
+    validation_failures = []
+
+    failed_rows = df[
         df["nse_profile"].isna()
     ]
 
-    return failures
+    for idx, row in failed_rows.iterrows():
+        validation_failures.append({
+            "rule_id": "DQ-16",
+            "severity": "WARNING",
+            "table_name": "companies",
+            "row": idx,
+            "message": "NSE profile missing"
+        })
+
+    return validation_failures
 
