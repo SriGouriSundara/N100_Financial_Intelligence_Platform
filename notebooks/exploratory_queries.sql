@@ -37,3 +37,58 @@ SELECT COUNT(*) FROM stock_prices;
 
 --(5) Foreign Key Check.
 PRAGMA foreign_key_check;
+
+--(6) Total Companies.
+SELECT COUNT(*) AS total_companies
+FROM companies;
+
+--(7) Top 10 Companies by ROE.
+SELECT
+company_name,
+roe_percentage
+FROM companies
+ORDER BY roe_percentage DESC
+LIMIT 10;
+
+--(8) Highest Sales.
+SELECT
+company_id,
+year,
+sales
+FROM profitandloss
+ORDER BY sales DESC
+LIMIT 10;
+
+--(9) Highest Net Profit.
+SELECT
+company_id,
+year,
+net_profit
+FROM profitandloss
+ORDER BY net_profit DESC
+LIMIT 10;
+
+--(10) Average Sales By Company.
+SELECT
+company_id,
+AVG(sales) AS avg_sales
+FROM profitandloss
+GROUP BY company_id
+ORDER BY avg_sales DESC;
+
+--(11) Highest Stock Price.
+SELECT
+company_id,
+date,
+close_price
+FROM stock_prices
+ORDER BY close_price DESC
+LIMIT 10;
+
+--(12) Sector Distribution.
+SELECT
+broad_sector,
+COUNT(*) AS company_count
+FROM sectors
+GROUP BY broad_sector
+ORDER BY company_count DESC;
