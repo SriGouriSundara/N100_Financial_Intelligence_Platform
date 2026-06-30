@@ -83,7 +83,6 @@ def check_opm_difference(
                 f"Calculated OPM={calculated_opm:.2f}% | "
                 f"Source OPM={source_opm:.2f}% | "
                 f"Difference={difference:.2f}%"
-
         )
         return True
     return False
@@ -147,3 +146,135 @@ def return_on_assets(net_profit, total_assets):
     if total_assets == 0:
         return None
     return (net_profit / total_assets) * 100
+
+# ============================================================
+# Sprint 2 - Day 09
+# Leverage & Efficiency Ratios
+# ============================================================
+
+def debt_to_equity(borrowings, equity_capital, reserves):
+    """
+    Calculate Debt-to-Equity Ratio.
+
+    Formula:
+        Borrowings / (Equity Capital + Reserves)
+
+    Rules:
+    - Return 0 if borrowings = 0 (Debt Free Company)
+    - Return None if Equity + Reserves <= 0
+    """
+
+    if borrowings == 0:
+        return 0
+
+    total_equity = equity_capital + reserves
+
+    if total_equity <= 0:
+        return None
+
+    return borrowings / total_equity
+
+
+def high_leverage_flag(debt_equity_ratio, broad_sector):
+    """
+    High leverage warning.
+
+    Rule:
+    - D/E > 5
+    - Company NOT in Financials sector
+    """
+
+    if debt_equity_ratio is None:
+        return False
+
+    if (
+        debt_equity_ratio > 5 and
+        broad_sector.lower() != "financials"
+    ):
+        return True
+
+    return False
+
+
+def interest_coverage_ratio(
+    operating_profit,
+    other_income,
+    interest
+):
+    """
+    Interest Coverage Ratio
+
+    Formula:
+        (Operating Profit + Other Income)
+        -------------------------------
+              Interest
+
+    Returns:
+        None if interest = 0
+    """
+
+    if interest == 0:
+        return None
+
+    return (operating_profit + other_income) / interest
+
+
+def icr_label(icr):
+    """
+    Label for Interest Coverage Ratio.
+
+    Returns:
+        "Debt Free" if ICR is None
+        "" otherwise
+    """
+
+    if icr is None:
+        return "Debt Free"
+
+    return ""
+
+
+def icr_warning_flag(icr):
+    """
+    Warning when company struggles
+    to pay interest.
+
+    Rule:
+        ICR < 1.5
+    """
+
+    if icr is None:
+        return False
+
+    return icr < 1.5
+
+
+def net_debt(borrowings, investments):
+    """
+    Net Debt
+
+    Formula:
+        Borrowings - Investments
+
+    Investments are treated as
+    liquid assets.
+    """
+
+    return borrowings - investments
+
+
+def asset_turnover(sales, total_assets):
+    """
+    Asset Turnover Ratio
+
+    Formula:
+        Sales / Total Assets
+
+    Returns:
+        None if Total Assets = 0
+    """
+
+    if total_assets == 0:
+        return None
+
+    return sales / total_assets
