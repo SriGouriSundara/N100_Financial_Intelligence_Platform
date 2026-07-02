@@ -1,0 +1,4 @@
+company_id,year,cfo_sign,cfi_sign,cff_sign,pattern_label
+1,2025,+,-,-,Reinvestor
+2,2025,+,+,+,Cash Accumulator
+3,2025,-,+,+,Distress Signal
