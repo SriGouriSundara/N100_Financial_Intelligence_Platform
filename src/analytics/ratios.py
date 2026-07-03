@@ -19,12 +19,12 @@ logger.setLevel(logging.INFO)
 
 # Prevent duplicate handlers
 if not logger.handlers:
-    file_handler = logging.FileHandler(log_file, mode="a")
-    formatter = logging.Formatter(
+   file_handler = logging.FileHandler(log_file, mode="w")
+formatter = logging.Formatter(
         "%(asctime)s | %(levelname)s | %(message)s"
     )
-    file_handler.setFormatter(formatter)
-    logger.addHandler(file_handler)
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
 
 # FUNCTION 1:
 

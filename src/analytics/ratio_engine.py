@@ -9,11 +9,33 @@ and populates the financial_ratios table.
 import sqlite3
 import pandas as pd
 from pathlib import Path
+import logging
+from pathlib import Path
 
 from src.analytics.ratios import *
 from src.analytics.cagr import *
 from src.analytics.cashflow_kpis import *
 from src.etl.normaliser import normalize_year
+
+output_folder = Path("output")
+output_folder.mkdir(exist_ok=True)
+
+log_file = output_folder / "ratio_edge_cases.log"
+
+logger = logging.getLogger("ratio_validation")
+logger.setLevel(logging.INFO)
+
+if not logger.handlers:
+
+    handler = logging.FileHandler(log_file, mode="a")
+
+    formatter = logging.Formatter(
+        "%(asctime)s | %(levelname)s | %(message)s"
+    )
+
+    handler.setFormatter(formatter)
+
+    logger.addHandler(handler)
 
 DB_PATH = Path("db") / "nifty100.db"
 
@@ -677,6 +699,181 @@ def calculate_kpis(df):
 
     return df
 
+def validate_financial_sector(master_df):
+    """
+    Financial companies naturally operate
+    with higher leverage.
+
+    Therefore,
+    suppress D/E warning for them.
+    """
+
+    print()
+
+    print("[STEP] Financial Sector Validation")
+
+    financial_mask = (
+
+        master_df["broad_sector"]
+
+        ==
+
+        "Financials"
+
+    )
+
+    master_df.loc[
+        financial_mask,
+        "high_leverage_flag"
+    ] = False
+
+    company_count = (
+    master_df.loc[financial_mask, "company_id"]
+    .nunique()
+)
+
+    row_count = financial_mask.sum()
+
+    print(f"Financial Companies : {company_count}")
+    print(f"Financial Rows      : {row_count}")
+    return master_df
+
+def validate_roce(master_df):
+    """
+    Compare calculated ROCE with the source ROCE from companies table.
+    Log differences greater than 5%.
+    """
+
+    print("\n[STEP] ROCE Cross-Check")
+
+    anomaly_count = 0
+
+    # Calculate ROCE if not already present
+    if "return_on_capital_employed_pct" not in master_df.columns:
+
+        master_df["return_on_capital_employed_pct"] = master_df.apply(
+            lambda row: return_on_capital_employed(
+                row["operating_profit"] +
+                row["other_income"],
+                row["equity_capital"],
+                row["reserves"],
+                row["borrowings"]
+            ),
+            axis=1
+        )
+        latest_df = (
+    master_df
+    .sort_values("year")
+    .groupby("company_id", as_index=False)
+    .tail(1)
+)
+
+    for _, row in latest_df.iterrows():
+
+        calculated = row["return_on_capital_employed_pct"]
+        source = row["roce_percentage"]
+
+        if (
+            calculated is None
+            or pd.isna(calculated)
+            or source is None
+            or pd.isna(source)
+        ):
+            continue
+
+        difference = abs(calculated - source)
+
+    if difference > 5:
+
+     if difference > 50:
+        category = "DATA_SOURCE_ISSUE"
+    elif difference > 20:
+        category = "VERSION_DIFFERENCE"
+    else:
+        category = "FORMULA_DISCREPANCY"
+
+    logger.info(
+        f"[{category}] "
+        f"Company={row['company_id']} "
+        f"Year={row['year']} "
+        f"Calculated_ROCE={calculated:.2f} "
+        f"Source_ROCE={source:.2f} "
+        f"Difference={difference:.2f}"
+    )
+
+    anomaly_count += 1
+
+    print(f"ROCE anomalies logged : {anomaly_count}")
+
+    return master_df
+
+
+def validate_roe(master_df):
+    """
+    Compare calculated ROE with source ROE.
+    Logs anomalies greater than 5%.
+    """
+
+    print("\n[STEP] ROE Cross-Check")
+
+    latest_df = (
+        master_df
+        .sort_values("year")
+        .groupby("company_id", as_index=False)
+        .tail(1)
+    )
+
+    anomaly_count = 0
+
+    for _, row in latest_df.iterrows():
+
+        calculated = row["return_on_equity_pct"]
+        source = row["roe_percentage"]
+
+        if calculated is None:
+            continue
+
+        if source is None:
+            continue
+
+        if pd.isna(calculated):
+            continue
+
+        if pd.isna(source):
+            continue
+
+        difference = abs(calculated - source)
+
+        if difference > 5:
+
+            difference = abs(calculated - source)
+
+    if difference > 50:
+     category = "DATA_SOURCE_ISSUE"
+
+    elif difference > 20:
+     category = "VERSION_DIFFERENCE"
+
+    else:
+     category = "FORMULA_DISCREPANCY"
+
+            # Sprint document specifically mentions TCS source value
+    if row["company_id"] == "TCS":
+                category = "DATA_SOURCE_ISSUE"
+
+                logger.info(
+                f"[{category}] "
+                f"Company={row['company_id']} "
+                f"Year={row['year']} "
+                f"Calculated_ROE={calculated:.2f} "
+                f"Source_ROE={source:.2f} "
+                f"Difference={difference:.2f}"
+            )
+
+                anomaly_count += 1
+
+    print(f"ROE anomalies logged : {anomaly_count}")
+
 import sqlite3
 import pandas as pd
 
@@ -850,6 +1047,12 @@ def main():
     preview_cols = [c for c in preview_cols if c in master_df.columns]
 
     print(master_df[preview_cols].head(10))
+    master_df = validate_financial_sector(
+    master_df
+)
+    master_df = validate_roce(master_df)
+    validate_roe(master_df)
+    populate_financial_ratios(master_df)
 
     print("\n[END] Ratio Engine Completed Successfully\n")
 
