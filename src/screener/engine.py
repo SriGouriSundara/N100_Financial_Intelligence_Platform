@@ -19,6 +19,7 @@ import yaml
 import pandas as pd
 
 from pathlib import Path
+import numpy as np
 
 from openpyxl.styles import PatternFill
 from openpyxl.styles import Font
@@ -781,19 +782,22 @@ def format_excel_sheet(ws):
 
         for column, limit in green_rules.items():
 
-            if column in header_map:
+         if column in header_map:
 
-                cell = ws.cell(
-                    row=row,
-                    column=header_map[column]
-                )
+          cell = ws.cell(
+            row=row,
+            column=header_map[column]
+        )
 
-                if (
-                    isinstance(cell.value, (int, float))
-                    and cell.value >= limit
-                ):
-                    cell.fill = green_fill
+        if isinstance(cell.value, (int, float)):
 
+            if cell.value >= limit:
+
+                cell.fill = green_fill
+
+            else:
+
+                cell.fill = red_fill
         for column, limit in red_rules.items():
 
             if column in header_map:
@@ -810,6 +814,132 @@ def format_excel_sheet(ws):
                     cell.fill = green_fill
                 else:
                     cell.fill = red_fill
+
+def winsorize_series(series):
+    """
+    Caps values between the 10th and 90th percentile.
+    """
+
+    lower = series.quantile(0.10)
+    upper = series.quantile(0.90)
+
+    return series.clip(lower=lower, upper=upper)
+
+def normalize_score(series):
+    """
+    Converts a numeric series into a 0–100 score.
+    """
+
+    minimum = series.min()
+    maximum = series.max()
+
+    if maximum == minimum:
+        return pd.Series(50, index=series.index)
+
+    return ((series - minimum) / (maximum - minimum)) * 100
+
+def calculate_composite_score(df):
+    """
+    Calculate a weighted composite quality score (0–100).
+    """
+
+    df = df.copy()
+
+    metrics = [
+        "return_on_equity_pct",
+        "net_profit_margin_pct",
+        "revenue_cagr_5yr",
+        "pat_cagr_5yr",
+        "asset_turnover",
+        "interest_coverage",
+        "debt_to_equity",
+        "free_cash_flow_cr"
+    ]
+
+    for metric in metrics:
+
+        if metric not in df.columns:
+            continue
+
+        df[metric] = winsorize_series(df[metric])
+
+        if metric == "debt_to_equity":
+
+            score = normalize_score(df[metric])
+
+            df["score_" + metric] = 100 - score
+
+        else:
+
+            df["score_" + metric] = normalize_score(df[metric])
+
+    df["composite_quality_score"] = (
+
+        df.get("score_return_on_equity_pct", 0) * 0.15 +
+
+        df.get("score_net_profit_margin_pct", 0) * 0.10 +
+
+        df.get("score_free_cash_flow_cr", 0) * 0.20 +
+
+        df.get("score_revenue_cagr_5yr", 0) * 0.10 +
+
+        df.get("score_pat_cagr_5yr", 0) * 0.10 +
+
+        df.get("score_asset_turnover", 0) * 0.10 +
+
+        df.get("score_interest_coverage", 0) * 0.10 +
+
+        df.get("score_debt_to_equity", 0) * 0.15
+    )
+
+    return df
+
+def calculate_sector_scores(df):
+    """
+    Compute sector-relative composite score (0–100).
+    """
+
+    df = df.copy()
+
+    sector_scores = []
+
+    for sector, sector_df in df.groupby("broad_sector"):
+
+        sector_df = sector_df.copy()
+
+        minimum = sector_df["composite_quality_score"].min()
+
+        maximum = sector_df["composite_quality_score"].max()
+
+        if maximum == minimum:
+
+            sector_df["sector_composite_score"] = 50
+
+        else:
+
+            sector_df["sector_composite_score"] = (
+
+                (
+                    sector_df["composite_quality_score"] - minimum
+                )
+
+                /
+
+                (
+
+                    maximum - minimum
+
+                )
+
+            ) * 100
+
+        sector_scores.append(sector_df)
+
+    return pd.concat(
+        sector_scores,
+        ignore_index=True
+    )
+
 
 def main():
  if __name__ == "__main__":
@@ -837,9 +967,78 @@ def main():
     # Prepare Master Data
     # ==================================================
 
-    master = prepare_master_dataframe()
+    master_df = prepare_master_dataframe()
 
-    print("\nMaster DataFrame prepared successfully.")
+    print("Master DataFrame prepared successfully.")
+    master_df = calculate_composite_score(master_df)
+
+    print("\nComposite score calculated successfully.")
+
+    master_df = calculate_sector_scores(master_df)
+
+    print("Sector-relative score calculated successfully.")
+    EXPORT_COLUMNS = [
+    "company_id",
+    "company_name",
+    "broad_sector",
+    "sub_sector",
+    "year",
+
+    "return_on_equity_pct",
+    "roce_percentage",
+    "net_profit_margin_pct",
+    "operating_profit_margin_pct",
+
+    "debt_to_equity",
+    "interest_coverage",
+    "asset_turnover",
+
+    "free_cash_flow_cr",
+    "capex_cr",
+    "cash_from_operations_cr",
+
+    "revenue_cagr_5yr",
+    "pat_cagr_5yr",
+    "eps_cagr_5yr",
+
+    "composite_quality_score",
+    "sector_composite_score"
+]
+
+    print("\nTop Composite Scores")
+
+    print(
+    master_df[
+        [
+            "company_name",
+            "composite_quality_score"
+        ]
+    ]
+    .sort_values(
+        "composite_quality_score",
+        ascending=False
+    )
+    .head(10)
+    )
+    print(
+    master_df[
+        [
+            "company_name",
+            "broad_sector",
+            "composite_quality_score",
+            "sector_composite_score"
+        ]
+    ]
+    .sort_values(
+        [
+            "broad_sector",
+            "sector_composite_score"
+        ],
+        ascending=False
+    )
+    .head(20)
+
+)
 
     # ==================================================
     # DAY 15 : CUSTOM SCREENER
@@ -850,7 +1049,7 @@ def main():
     print("=" * 60)
 
     screened = apply_filters(
-        master,
+        master_df,
         config
     )
 
@@ -867,11 +1066,11 @@ def main():
     print("DAY 15 SUMMARY")
     print("=" * 60)
 
-    print(f"Total Companies Analysed : {len(master)}")
+    print(f"Total Companies Analysed : {len(master_df)}")
     print(f"Companies Passed         : {len(screened)}")
 
-    if len(master) > 0:
-        selection_rate = (len(screened) / len(master)) * 100
+    if len(master_df) > 0:
+        selection_rate = (len(screened) / len(master_df)) * 100
         print(f"Selection Rate           : {selection_rate:.2f}%")
 
     print("\nTop Screened Companies")
@@ -916,7 +1115,7 @@ def main():
     for preset_name, preset_rules in config["presets"].items():
 
         preset_df = run_preset(
-            master,
+            master_df,
             preset_name,
             preset_rules
         )
@@ -931,7 +1130,13 @@ def main():
     # ==================================================
     # EXPORT ALL PRESETS
     # ==================================================
+    available_columns = [
+    col
+    for col in EXPORT_COLUMNS
+    if col in preset_df.columns
+]
 
+    preset_df = preset_df[available_columns]
     output_file = OUTPUT_PATH / "screener_output.xlsx"
 
     validation_rows = []
@@ -949,12 +1154,18 @@ def main():
                 .title()
                 .replace(" ", "_")
             )[:31]
+            available_columns = [
+    col
+    for col in EXPORT_COLUMNS
+    if col in preset_df.columns
+]
 
+            preset_df = preset_df[available_columns]
             preset_df.to_excel(
-                writer,
-                sheet_name=sheet_name,
-                index=False
-            )
+    writer,
+    sheet_name=sheet_name,
+    index=False
+)
 
             row_count = len(preset_df)
 
@@ -1030,14 +1241,31 @@ def main():
     # ==================================================
     # FINAL STATUS
     # ==================================================
-
+    
     print("\n" + "=" * 60)
     print("SPRINT 3 STATUS")
     print("=" * 60)
+    print("\nComposite Score Validation")
+    print("-" * 40)
+    print(f"Minimum Score : {master_df['composite_quality_score'].min():.2f}")
+    print(f"Maximum Score : {master_df['composite_quality_score'].max():.2f}")
+    print(f"Average Score : {master_df['composite_quality_score'].mean():.2f}")
 
-    print("Day 15 : COMPLETED")
-    print("Day 16 : COMPLETED")
+    print("\nSector Relative Score Validation")
+    print("-" * 40)
 
+    sector_summary = (
+     master_df.groupby("broad_sector")["sector_composite_score"]
+    .agg(["min", "max", "mean"])
+    .round(2)
+)
+
+    print(sector_summary)
+    print("\nWorkbook Validation")
+    print("-" * 40)
+    print(f"Workbook Exists : {output_file.exists()}")
     print("\nOutput Generated:")
     print(output_file)
 
+if __name__ == "__main__":
+    main()
