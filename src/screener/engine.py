@@ -20,6 +20,10 @@ import pandas as pd
 
 from pathlib import Path
 
+from openpyxl.styles import PatternFill
+from openpyxl.styles import Font
+from openpyxl.styles import Alignment
+
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 DATABASE_PATH = PROJECT_ROOT / "db" / "nifty100.db"
@@ -43,10 +47,134 @@ def load_config():
     """
 
     with open(CONFIG_PATH, "r") as file:
-
         config = yaml.safe_load(file)
 
     return config
+
+def apply_single_filter(df, column, operator, value):
+    """
+    Apply a single filter only if the column exists.
+    Returns the filtered DataFrame.
+    """
+
+    if column not in df.columns:
+        print(f"[SKIPPED] Column '{column}' not available.")
+        return df
+
+    before = len(df)
+
+    if operator == ">=":
+        df = df[df[column] >= value]
+
+    elif operator == "<=":
+        df = df[df[column] <= value]
+
+    elif operator == ">":
+        df = df[df[column] > value]
+
+    elif operator == "<":
+        df = df[df[column] < value]
+
+    elif operator == "==":
+        df = df[df[column] == value]
+
+    after = len(df)
+
+    print(f"{column} {operator} {value} : {before} -> {after}")
+
+    return df
+
+def run_preset(df, preset_name, rules):
+    """
+    Apply one preset and return a filtered DataFrame.
+    """
+
+    print("\n")
+    print("=" * 60)
+    print(f"Running Preset : {preset_name}")
+    print("=" * 60)
+
+    result = df.copy()
+
+    if "roe_min" in rules:
+        result = apply_single_filter(
+            result,
+            "return_on_equity_pct",
+            ">=",
+            rules["roe_min"]
+        )
+
+    if "debt_to_equity_max" in rules:
+
+        non_financial = result[
+            result["broad_sector"] != "Financials"
+        ]
+
+        financial = result[
+            result["broad_sector"] == "Financials"
+        ]
+
+        non_financial = apply_single_filter(
+            non_financial,
+            "debt_to_equity",
+            "<=",
+            rules["debt_to_equity_max"]
+        )
+
+        result = pd.concat(
+            [non_financial, financial],
+            ignore_index=True
+        )
+
+    if "free_cash_flow_min" in rules:
+        result = apply_single_filter(
+            result,
+            "free_cash_flow_cr",
+            ">=",
+            rules["free_cash_flow_min"]
+        )
+
+    if "revenue_cagr_5yr_min" in rules:
+        result = apply_single_filter(
+            result,
+            "revenue_cagr_5yr",
+            ">=",
+            rules["revenue_cagr_5yr_min"]
+        )
+
+    if "pat_cagr_5yr_min" in rules:
+        result = apply_single_filter(
+            result,
+            "pat_cagr_5yr",
+            ">=",
+            rules["pat_cagr_5yr_min"]
+        )
+
+    if "dividend_payout_ratio_pct_max" in rules:
+        result = apply_single_filter(
+            result,
+            "dividend_payout_ratio_pct",
+            "<=",
+            rules["dividend_payout_ratio_pct_max"]
+        )
+
+    if "debt_to_equity_exact" in rules:
+        result = apply_single_filter(
+            result,
+            "debt_to_equity",
+            "==",
+            rules["debt_to_equity_exact"]
+        )
+
+    if "composite_quality_score" in result.columns:
+        result = result.sort_values(
+            "composite_quality_score",
+            ascending=False
+        )
+
+    print(f"Companies Selected : {len(result)}")
+
+    return result
 
 def load_tables(conn):
     """
@@ -280,6 +408,18 @@ def prepare_master_dataframe():
     conn.close()
 
     return master
+
+    preset_results = {}
+    presets = config["presets"]
+
+    for preset_name, preset_rules in presets.items():
+     preset_df = run_preset(
+        master_df,
+        preset_name,
+        preset_rules
+    )
+
+    preset_results[preset_name] = preset_df
    
 
 def apply_min_filter(df, column, minimum):
@@ -559,31 +699,155 @@ def sort_results(df, config):
         ascending=sorting["ascending"]
 
     )
-if __name__ == "__main__":
+
+def format_excel_sheet(ws):
+    """
+    Apply formatting to one worksheet.
+    """
+
+    green_fill = PatternFill(
+        fill_type="solid",
+        start_color="C6EFCE",
+        end_color="C6EFCE"
+    )
+
+    red_fill = PatternFill(
+        fill_type="solid",
+        start_color="FFC7CE",
+        end_color="FFC7CE"
+    )
+
+    header_fill = PatternFill(
+        fill_type="solid",
+        start_color="1F4E78",
+        end_color="1F4E78"
+    )
+
+    # -------------------------
+    # Header Formatting
+    # -------------------------
+
+    for cell in ws[1]:
+
+        cell.fill = header_fill
+
+        cell.font = Font(
+            bold=True,
+            color="FFFFFF"
+        )
+
+        cell.alignment = Alignment(
+            horizontal="center"
+        )
+
+    # -------------------------
+    # Auto Width
+    # -------------------------
+
+    for column_cells in ws.columns:
+
+        length = max(
+            len(str(cell.value))
+            if cell.value is not None
+            else 0
+            for cell in column_cells
+        )
+
+        ws.column_dimensions[
+            column_cells[0].column_letter
+        ].width = min(length + 3, 40)
+
+    # -------------------------
+    # Green / Red Formatting
+    # -------------------------
+
+    header_map = {
+        cell.value: idx + 1
+        for idx, cell in enumerate(ws[1])
+    }
+
+    green_rules = {
+        "return_on_equity_pct": 15,
+        "free_cash_flow_cr": 0,
+        "revenue_cagr_5yr": 10,
+        "pat_cagr_5yr": 10
+    }
+
+    red_rules = {
+        "debt_to_equity": 2
+    }
+
+    for row in range(2, ws.max_row + 1):
+
+        for column, limit in green_rules.items():
+
+            if column in header_map:
+
+                cell = ws.cell(
+                    row=row,
+                    column=header_map[column]
+                )
+
+                if (
+                    isinstance(cell.value, (int, float))
+                    and cell.value >= limit
+                ):
+                    cell.fill = green_fill
+
+        for column, limit in red_rules.items():
+
+            if column in header_map:
+
+                cell = ws.cell(
+                    row=row,
+                    column=header_map[column]
+                )
+
+                if (
+                    isinstance(cell.value, (int, float))
+                    and cell.value <= limit
+                 ):
+                    cell.fill = green_fill
+                else:
+                    cell.fill = red_fill
+
+def main():
+ if __name__ == "__main__":
 
     print("\n" + "=" * 60)
-    print("SPRINT 3 - DAY 15 : FINANCIAL SCREENER ENGINE")
+    print("SPRINT 3 - DAY 15 & DAY 16 : FINANCIAL SCREENER ENGINE")
     print("=" * 60)
 
-    # --------------------------------------------------
+    # ==================================================
     # Load Configuration
-    # --------------------------------------------------
+    # ==================================================
 
     config = load_config()
 
     print("\nConfiguration loaded successfully.")
 
-    # --------------------------------------------------
+    print("\nCONFIG KEYS")
+    print("-" * 30)
+    print(config.keys())
+
+    print("\nFULL CONFIG")
+    print(config)
+
+    # ==================================================
     # Prepare Master Data
-    # --------------------------------------------------
+    # ==================================================
 
     master = prepare_master_dataframe()
 
     print("\nMaster DataFrame prepared successfully.")
 
-    # --------------------------------------------------
-    # Apply Filters
-    # --------------------------------------------------
+    # ==================================================
+    # DAY 15 : CUSTOM SCREENER
+    # ==================================================
+
+    print("\n" + "=" * 60)
+    print("DAY 15 : CUSTOM SCREENER")
+    print("=" * 60)
 
     screened = apply_filters(
         master,
@@ -592,10 +856,6 @@ if __name__ == "__main__":
 
     print("\nFiltering completed successfully.")
 
-    # --------------------------------------------------
-    # Sort Results
-    # --------------------------------------------------
-
     screened = sort_results(
         screened,
         config
@@ -603,20 +863,16 @@ if __name__ == "__main__":
 
     print("\nSorting completed successfully.")
 
-    # --------------------------------------------------
-    # Display Summary
-    # --------------------------------------------------
-
     print("\n" + "=" * 60)
-    print("SCREENING SUMMARY")
+    print("DAY 15 SUMMARY")
     print("=" * 60)
 
     print(f"Total Companies Analysed : {len(master)}")
     print(f"Companies Passed         : {len(screened)}")
 
     if len(master) > 0:
-        percentage = (len(screened) / len(master)) * 100
-        print(f"Selection Rate           : {percentage:.2f}%")
+        selection_rate = (len(screened) / len(master)) * 100
+        print(f"Selection Rate           : {selection_rate:.2f}%")
 
     print("\nTop Screened Companies")
     print("-" * 60)
@@ -647,22 +903,141 @@ if __name__ == "__main__":
         .to_string(index=False)
     )
 
-    # --------------------------------------------------
-    # Export Excel
-    # --------------------------------------------------
+    # ==================================================
+    # DAY 16 : PRESET SCREENERS
+    # ==================================================
+
+    print("\n" + "=" * 60)
+    print("DAY 16 : PRESET SCREENERS")
+    print("=" * 60)
+
+    preset_results = {}
+
+    for preset_name, preset_rules in config["presets"].items():
+
+        preset_df = run_preset(
+            master,
+            preset_name,
+            preset_rules
+        )
+
+        preset_df = sort_results(
+            preset_df,
+            config
+        )
+
+        preset_results[preset_name] = preset_df
+
+    # ==================================================
+    # EXPORT ALL PRESETS
+    # ==================================================
 
     output_file = OUTPUT_PATH / "screener_output.xlsx"
 
-    screened.to_excel(
+    validation_rows = []
+
+    with pd.ExcelWriter(
         output_file,
-        index=False
-    )
+        engine="openpyxl"
+    ) as writer:
+
+        for preset_name, preset_df in preset_results.items():
+
+            sheet_name = (
+                preset_name
+                .replace("_", " ")
+                .title()
+                .replace(" ", "_")
+            )[:31]
+
+            preset_df.to_excel(
+                writer,
+                sheet_name=sheet_name,
+                index=False
+            )
+
+            row_count = len(preset_df)
+
+            status = (
+                "PASS"
+                if 5 <= row_count <= 50
+                else "REVIEW"
+            )
+
+            validation_rows.append(
+                {
+                    "Preset": sheet_name,
+                    "Companies": row_count,
+                    "Status": status
+                }
+            )
+
+        validation_df = pd.DataFrame(validation_rows)
+
+        validation_df.to_excel(
+            writer,
+            sheet_name="Validation_Summary",
+            index=False
+        )
+
+        workbook = writer.book
+
+        for sheet in workbook.sheetnames:
+
+            worksheet = workbook[sheet]
+
+            format_excel_sheet(worksheet)
+
+    # ==================================================
+    # DAY 16 VALIDATION
+    # ==================================================
+
+    print("\n" + "=" * 60)
+    print("DAY 16 VALIDATION")
+    print("=" * 60)
+
+    for row in validation_rows:
+
+        print(
+            f"{row['Preset']:<30}"
+            f"{row['Companies']:>5} companies   "
+            f"[{row['Status']}]"
+        )
+
+    # ==================================================
+    # EXPORT SUMMARY
+    # ==================================================
 
     print("\n" + "=" * 60)
     print("EXPORT COMPLETED")
     print("=" * 60)
 
-    print(f"Excel File : {output_file}")
-    print(f"Rows Saved : {len(screened)}")
+    print(f"Workbook : {output_file}")
+    print(f"Worksheets : {len(preset_results) + 1}")
 
-    print("\nDay 15 completed successfully.")
+    print("\nGenerated Sheets:")
+
+    for row in validation_rows:
+
+        print(
+            f"  • {row['Preset']} ({row['Companies']} companies)"
+        )
+
+    print("  • Validation_Summary")
+
+    print("\nWorkbook saved successfully.")
+
+    # ==================================================
+    # FINAL STATUS
+    # ==================================================
+
+    print("\n" + "=" * 60)
+    print("SPRINT 3 STATUS")
+    print("=" * 60)
+
+    print("Day 15 : COMPLETED")
+    print("Day 16 : COMPLETED")
+
+    print("\nOutput Generated:")
+    print(output_file)
+
