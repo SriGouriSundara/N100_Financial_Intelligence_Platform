@@ -450,3 +450,325 @@ def get_company_pros_cons(company_id):
             "Cons data not available."
         ]
     }
+
+@st.cache_data(ttl=600)
+def get_screener_data(year):
+    """
+    Load all screener metrics for the selected year.
+    """
+
+    query = """
+    SELECT
+
+        c.id AS company_id,
+
+        c.company_name,
+
+        s.broad_sector,
+
+        fr.return_on_equity_pct,
+
+        fr.net_profit_margin_pct,
+
+        fr.operating_profit_margin_pct,
+
+        fr.debt_to_equity,
+
+        fr.interest_coverage,
+
+        fr.free_cash_flow_cr,
+
+        fr.asset_turnover,
+
+        fr.revenue_cagr_5yr,
+
+        fr.pat_cagr_5yr,
+
+        fr.composite_quality_score
+
+    FROM financial_ratios fr
+
+    JOIN companies c
+
+        ON fr.company_id = c.id
+
+    LEFT JOIN sectors s
+
+        ON c.id = s.company_id
+
+    WHERE fr.year = ?
+
+    """
+
+    return run_query(query, [year])
+
+def apply_filters(
+    df,
+    roe,
+    de,
+    fcf,
+    revenue,
+    pat,
+    opm,
+    icr,
+):
+    """
+    Apply all screener filters.
+    """
+
+    filtered = df.copy()
+
+    filtered = filtered[
+        filtered["return_on_equity_pct"] >= roe
+    ]
+
+    filtered = filtered[
+        filtered["debt_to_equity"] <= de
+    ]
+
+    filtered = filtered[
+        filtered["free_cash_flow_cr"] >= fcf
+    ]
+
+    filtered = filtered[
+        filtered["revenue_cagr_5yr"] >= revenue
+    ]
+
+    filtered = filtered[
+        filtered["pat_cagr_5yr"] >= pat
+    ]
+
+    filtered = filtered[
+        filtered["operating_profit_margin_pct"] >= opm
+    ]
+
+    filtered = filtered[
+        filtered["interest_coverage"] >= icr
+    ]
+
+    return filtered
+
+def apply_preset(df, preset):
+    """
+    Apply predefined screener presets.
+    """
+
+    presets = {
+
+        "Quality":
+
+        (
+            15,
+            1,
+            0,
+            10,
+            10,
+            15,
+            2
+        ),
+
+        "Growth":
+
+        (
+            15,
+            2,
+            0,
+            15,
+            20,
+            10,
+            2
+        ),
+
+        "Dividend":
+
+        (
+            12,
+            2,
+            0,
+            8,
+            8,
+            10,
+            2
+        ),
+
+        "Debt Free":
+
+        (
+            12,
+            0,
+            0,
+            5,
+            5,
+            10,
+            2
+        ),
+
+        "Turnaround":
+
+        (
+            5,
+            3,
+            -999999,
+            10,
+            10,
+            5,
+            1
+        )
+
+    }
+
+    values = presets[preset]
+
+    return apply_filters(
+
+        df,
+
+        values[0],
+
+        values[1],
+
+        values[2],
+
+        values[3],
+
+        values[4],
+
+        values[5],
+
+        values[6]
+
+    )
+
+def export_csv(df):
+    """
+    Convert DataFrame to CSV.
+    """
+
+    return df.to_csv(
+        index=False
+    ).encode(
+        "utf-8"
+    )
+
+@st.cache_data(ttl=600)
+def get_peer_groups():
+    """
+    Returns all peer groups.
+    """
+
+    query = """
+
+    SELECT DISTINCT
+
+        peer_group_name
+
+    FROM peer_groups
+
+    ORDER BY peer_group_name
+
+    """
+
+    return run_query(query)
+
+@st.cache_data(ttl=600)
+def get_peer_companies(group_name):
+
+    query = """
+
+    SELECT
+
+        company_id
+
+    FROM peer_groups
+
+    WHERE peer_group_name=?
+
+    ORDER BY company_id
+
+    """
+
+    return run_query(query, [group_name])
+
+@st.cache_data(ttl=600)
+def get_peer_company_metrics(company_id):
+
+    query = """
+
+    SELECT
+
+        return_on_equity_pct,
+
+        net_profit_margin_pct,
+
+        debt_to_equity,
+
+        free_cash_flow_cr,
+
+        revenue_cagr_5yr,
+
+        pat_cagr_5yr,
+
+        asset_turnover,
+
+        composite_quality_score
+
+    FROM financial_ratios
+
+    WHERE company_id=?
+
+    ORDER BY year DESC
+
+    LIMIT 1
+
+    """
+
+    return run_query(query, [company_id])
+
+@st.cache_data(ttl=600)
+def get_peer_average_metrics(group_name):
+
+    query = """
+
+    SELECT
+
+        AVG(fr.return_on_equity_pct) AS roe,
+
+        AVG(fr.net_profit_margin_pct) AS npm,
+
+        AVG(fr.debt_to_equity) AS de,
+
+        AVG(fr.free_cash_flow_cr) AS fcf,
+
+        AVG(fr.revenue_cagr_5yr) AS revenue,
+
+        AVG(fr.pat_cagr_5yr) AS pat,
+
+        AVG(fr.asset_turnover) AS turnover,
+
+        AVG(fr.composite_quality_score) AS score
+
+    FROM financial_ratios fr
+
+    JOIN peer_groups pg
+
+    ON fr.company_id=pg.company_id
+
+    WHERE
+
+        pg.peer_group_name=?
+
+    """
+
+    return run_query(query, [group_name])
+
+from src.dashboard.utils.db import *
+
+print(get_screener_data(2024).head())
+
+print(get_peer_groups())
+
+print(get_peer_companies("IT Services"))
+
+print(get_peer_company_metrics("TCS"))
+
+print(get_peer_average_metrics("IT Services"))

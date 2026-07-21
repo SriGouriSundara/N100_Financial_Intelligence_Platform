@@ -9,99 +9,274 @@ Interactive filters and exports will be implemented on Day 24.
 """
 
 import streamlit as st
-from src.dashboard.utils.db import get_companies
+import pandas as pd
 
-# --------------------------------------------------
-# PAGE TITLE
-# --------------------------------------------------
+from src.dashboard.utils.db import (
+    get_screener_data,
+    apply_filters,
+    apply_preset,
+    export_csv,
+)
+
+# -------------------------------------------------------
+# Page Configuration
+# -------------------------------------------------------
+
+st.set_page_config(
+    page_title="Financial Screener",
+    page_icon="📊",
+    layout="wide",
+)
 
 st.title("📊 Financial Screener")
 
-st.write("""
-Welcome to the Financial Screener.
+st.write(
+    """
+Use the sidebar filters to discover companies
+matching your investment criteria.
+"""
+)
 
-This page will allow users to filter companies
-using various financial metrics.
-""")
+# -------------------------------------------------------
+# Sidebar
+# -------------------------------------------------------
 
-# --------------------------------------------------
-# LOAD COMPANIES
-# --------------------------------------------------
+st.sidebar.header("Screener Filters")
 
-try:
-    companies = get_companies()
+year = st.sidebar.selectbox(
+    "Financial Year",
+    [2019, 2020, 2021, 2022, 2023, 2024],
+    index=5,
+)
 
-    company_count = len(companies)
+# -------------------------------------------------------
+# Load Data
+# -------------------------------------------------------
 
-except Exception:
-    companies = None
-    company_count = 0
+df = get_screener_data(year)
 
-# --------------------------------------------------
-# DASHBOARD SUMMARY
-# --------------------------------------------------
+if df.empty:
+    st.warning("No financial data available.")
+    st.stop()
+
+# -------------------------------------------------------
+# Sidebar Sliders
+# -------------------------------------------------------
+
+roe = st.sidebar.slider(
+    "Minimum ROE (%)",
+    -100.0,
+    500.0,
+    15.0,
+)
+
+de = st.sidebar.slider(
+    "Maximum Debt/Equity",
+    0.0,
+    10.0,
+    2.0,
+)
+
+fcf = st.sidebar.slider(
+    "Minimum Free Cash Flow",
+    -50000.0,
+    50000.0,
+    0.0,
+)
+
+revenue = st.sidebar.slider(
+    "Revenue CAGR 5Y (%)",
+    -50.0,
+    100.0,
+    10.0,
+)
+
+pat = st.sidebar.slider(
+    "PAT CAGR 5Y (%)",
+    -50.0,
+    100.0,
+    10.0,
+)
+
+opm = st.sidebar.slider(
+    "Operating Margin (%)",
+    -50.0,
+    100.0,
+    10.0,
+)
+
+# -------------------------------------------------------
+# Placeholder sliders
+# (Implemented in Day 26)
+# -------------------------------------------------------
+
+st.sidebar.markdown("---")
+
+st.sidebar.caption("Available after Day 26")
+
+st.sidebar.slider(
+    "Maximum P/E",
+    0.0,
+    100.0,
+    20.0,
+    disabled=True,
+)
+
+st.sidebar.slider(
+    "Maximum P/B",
+    0.0,
+    20.0,
+    3.0,
+    disabled=True,
+)
+
+st.sidebar.slider(
+    "Dividend Yield (%)",
+    0.0,
+    10.0,
+    2.0,
+    disabled=True,
+)
+
+icr = st.sidebar.slider(
+    "Interest Coverage",
+    0.0,
+    20.0,
+    2.0,
+)
+
+# -------------------------------------------------------
+# Preset Screeners
+# -------------------------------------------------------
+
+st.subheader("Preset Screeners")
 
 col1, col2, col3 = st.columns(3)
 
-with col1:
-    st.metric(
-        label="Companies Loaded",
-        value=company_count
+quality = col1.button("🏆 Quality")
+
+growth = col2.button("🚀 Growth")
+
+dividend = col3.button("💰 Dividend")
+
+col4, col5, col6 = st.columns(3)
+
+debtfree = col4.button("✅ Debt Free")
+
+turnaround = col5.button("📈 Turnaround")
+
+value = col6.button("💎 Value")
+
+filtered = df.copy()
+
+# -------------------------------------------------------
+# Preset Logic
+# -------------------------------------------------------
+
+if quality:
+
+    filtered = apply_preset(df, "Quality")
+
+elif growth:
+
+    filtered = apply_preset(df, "Growth")
+
+elif dividend:
+
+    filtered = apply_preset(df, "Dividend")
+
+elif debtfree:
+
+    filtered = apply_preset(df, "Debt Free")
+
+elif turnaround:
+
+    filtered = apply_preset(df, "Turnaround")
+
+else:
+
+    filtered = apply_filters(
+        df,
+        roe,
+        de,
+        fcf,
+        revenue,
+        pat,
+        opm,
+        icr,
     )
 
-with col2:
-    st.metric(
-        label="Preset Screeners",
-        value="6"
-    )
+# -------------------------------------------------------
+# Result Count
+# -------------------------------------------------------
 
-with col3:
-    st.metric(
-        label="Filter Metrics",
-        value="10+"
-    )
+st.success(
+    f"{len(filtered)} companies match your filters."
+)
 
-# --------------------------------------------------
-# PLACEHOLDER FILTERS
-# --------------------------------------------------
+# -------------------------------------------------------
+# Sort
+# -------------------------------------------------------
 
-st.subheader("Available Filters")
+filtered = filtered.sort_values(
+    by="composite_quality_score",
+    ascending=False,
+)
 
-filters = [
-    "ROE",
-    "Debt to Equity",
-    "Revenue CAGR",
-    "PAT CAGR",
-    "Operating Profit Margin",
-    "P/E",
-    "P/B",
-    "Dividend Yield",
-    "Interest Coverage",
-    "Free Cash Flow"
+# -------------------------------------------------------
+# Display Columns
+# -------------------------------------------------------
+
+columns = [
+
+    "company_id",
+
+    "company_name",
+
+    "broad_sector",
+
+    "return_on_equity_pct",
+
+    "debt_to_equity",
+
+    "free_cash_flow_cr",
+
+    "revenue_cagr_5yr",
+
+    "pat_cagr_5yr",
+
+    "operating_profit_margin_pct",
+
+    "interest_coverage",
+
+    "composite_quality_score",
+
 ]
 
-for item in filters:
-    st.checkbox(item, value=False, disabled=True)
+st.dataframe(
 
-# --------------------------------------------------
-# PLACEHOLDER TABLE
-# --------------------------------------------------
+    filtered[columns],
 
-st.subheader("Preview")
+    use_container_width=True,
 
-if companies is not None:
-    st.dataframe(companies.head())
+    hide_index=True,
 
-st.info("""
-Day 24 will include:
+)
 
-• Interactive sliders
+# -------------------------------------------------------
+# Download CSV
+# -------------------------------------------------------
 
-• Preset screeners
+csv = export_csv(filtered)
 
-• Live filtering
+st.download_button(
 
-• CSV Download
+    label="⬇ Download CSV",
 
-• Composite Score Sorting
-""")
+    data=csv,
+
+    file_name="screener_results.csv",
+
+    mime="text/csv",
+
+)

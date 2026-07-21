@@ -11,99 +11,234 @@ will be implemented on Day 24.
 """
 
 import streamlit as st
-from src.dashboard.utils.db import get_companies
+import pandas as pd
+import plotly.graph_objects as go
 
-# --------------------------------------------------
-# TITLE
-# --------------------------------------------------
+from src.dashboard.utils.db import (
+    get_peer_groups,
+    get_peer_companies,
+    get_peer_company_metrics,
+    get_peer_average_metrics,
+)
+
+# -------------------------------------------------------
+# Page Configuration
+# -------------------------------------------------------
+
+st.set_page_config(
+    page_title="Peer Comparison",
+    page_icon="👥",
+    layout="wide",
+)
 
 st.title("👥 Peer Comparison")
 
-st.write("""
-Compare a company with its peer group.
-
-Radar charts and percentile rankings
-will be available in Day 24.
-""")
-
-# --------------------------------------------------
-# COMPANY LIST
-# --------------------------------------------------
-
-try:
-
-    companies = get_companies()
-
-    company_names = companies["company_name"].tolist()
-
-except Exception:
-
-    company_names = []
-
-# --------------------------------------------------
-# COMPANY SELECTION
-# --------------------------------------------------
-
-selected = st.selectbox(
-
-    "Choose Company",
-
-    company_names
-
+st.write(
+    """
+Compare a company with the average performance
+of companies in the same peer group.
+"""
 )
 
-# --------------------------------------------------
-# PLACEHOLDER
-# --------------------------------------------------
+# -------------------------------------------------------
+# Peer Group Dropdown
+# -------------------------------------------------------
 
-if selected:
+peer_df = get_peer_groups()
 
-    st.success(
+if peer_df.empty:
+    st.warning("No peer groups found.")
+    st.stop()
 
-        f"Selected : {selected}"
+peer_group = st.selectbox(
+    "Select Peer Group",
+    peer_df["peer_group_name"]
+)
 
-    )
+# -------------------------------------------------------
+# Company Dropdown
+# -------------------------------------------------------
 
-st.subheader("Upcoming Features")
+companies = get_peer_companies(peer_group)
 
-features = [
+if companies.empty:
+    st.info("No companies available in this peer group.")
+    st.stop()
 
-    "Radar Chart",
+company = st.selectbox(
+    "Select Company",
+    companies["company_id"]
+)
 
-    "Peer Ranking",
+# -------------------------------------------------------
+# Load Metrics
+# -------------------------------------------------------
 
-    "Percentile Score",
+company_metrics = get_peer_company_metrics(company)
 
-    "Benchmark Comparison",
+peer_average = get_peer_average_metrics(peer_group)
 
-    "Peer KPI Table"
+if company_metrics.empty:
+    st.warning("No financial metrics available.")
+    st.stop()
+
+if peer_average.empty:
+    st.warning("Peer average not available.")
+    st.stop()
+
+company_row = company_metrics.iloc[0]
+peer_row = peer_average.iloc[0]
+
+st.subheader("📈 Radar Comparison")
+
+categories = [
+
+    "ROE",
+    "NPM",
+    "Debt/Equity",
+    "FCF",
+    "Revenue CAGR",
+    "PAT CAGR",
+    "Asset Turnover",
+    "Quality Score",
 
 ]
 
-for item in features:
+company_values = [
 
-    st.checkbox(
+    company_row["return_on_equity_pct"],
+    company_row["net_profit_margin_pct"],
+    company_row["debt_to_equity"],
+    company_row["free_cash_flow_cr"],
+    company_row["revenue_cagr_5yr"],
+    company_row["pat_cagr_5yr"],
+    company_row["asset_turnover"],
+    company_row["composite_quality_score"],
 
-        item,
+]
 
-        value=False,
+peer_values = [
 
-        disabled=True
+    peer_row["roe"],
+    peer_row["npm"],
+    peer_row["de"],
+    peer_row["fcf"],
+    peer_row["revenue"],
+    peer_row["pat"],
+    peer_row["turnover"],
+    peer_row["score"],
+
+]
+
+fig = go.Figure()
+
+fig.add_trace(
+
+    go.Scatterpolar(
+
+        r=company_values,
+
+        theta=categories,
+
+        fill="toself",
+
+        name=company,
 
     )
 
+)
+
+fig.add_trace(
+
+    go.Scatterpolar(
+
+        r=peer_values,
+
+        theta=categories,
+
+        fill="toself",
+
+        name="Peer Average",
+
+    )
+
+)
+
+fig.update_layout(
+
+    polar=dict(
+        radialaxis=dict(
+            visible=True
+        )
+    ),
+
+    showlegend=True,
+
+    height=600,
+
+)
+
+st.plotly_chart(
+    fig,
+    use_container_width=True,
+)
+
+st.subheader("📊 KPI Comparison")
+
+comparison = pd.DataFrame({
+
+    "Metric": categories,
+
+    "Selected Company": company_values,
+
+    "Peer Average": peer_values,
+
+})
+
+st.dataframe(
+
+    comparison,
+
+    use_container_width=True,
+
+    hide_index=True,
+
+)
+
+st.subheader("🏆 Companies in Peer Group")
+
+table = companies.copy()
+
+table["Benchmark"] = table["company_id"].apply(
+
+    lambda x: "⭐" if x == company else ""
+
+)
+
+def highlight(row):
+
+    if row["company_id"] == company:
+
+        return [
+
+            "background-color:#FFD966"
+
+        ] * len(row)
+
+    return [""] * len(row)
+
+st.dataframe(
+
+    table.style.apply(highlight, axis=1),
+
+    use_container_width=True,
+
+)
+
 st.info(
-    """
-    Day 24 Implementation
 
-    • Radar Chart
+    "The selected company is highlighted in gold. "
+    "The radar chart compares its performance "
+    "against the peer-group average."
 
-    • Plotly Charts
-
-    • Peer Ranking
-
-    • Percentiles
-
-    • Benchmark Highlight
-    """
 )
