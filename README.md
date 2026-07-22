@@ -1,470 +1,484 @@
-# N100 Financial Intelligence Platform
+# 📊 N100 Financial Intelligence Platform
 
-## Overview
+A comprehensive financial analytics platform built using **Python, SQLite, Streamlit, Pandas, and Plotly** to analyze Nifty 100 companies. The platform provides financial ratio analysis, stock screening, peer comparison, trend visualization, capital allocation insights, and valuation analysis through an interactive dashboard.
 
-The N100 Financial Intelligence Platform is a data engineering and analytics project that builds a validated financial dataset for Nifty 100 companies.
+---
 
-The project focuses on:
+# Project Overview
 
-* Data ingestion from Excel sources
-* Data normalization and standardization
-* Data Quality (DQ) validation framework
-* Financial data integrity checks
-* ETL pipeline development
-* Future analytics and dashboarding
+The N100 Financial Intelligence Platform is designed to transform raw financial statement data into meaningful investment insights.
+
+The application processes historical financial data for **92 Nifty 100 companies**, computes key financial metrics, stores the processed data in SQLite, and presents interactive visualizations using Streamlit.
+
+---
+
+# Objectives
+
+- Build a robust ETL pipeline for financial data
+- Calculate 50+ financial KPIs
+- Develop an interactive financial screener
+- Compare companies within peer groups
+- Visualize historical trends
+- Analyze capital allocation patterns
+- Perform valuation analysis
+- Deliver a production-ready Streamlit dashboard
+
+---
+
+# Technology Stack
+
+| Category             | Technology    |
+| -------------------- | ------------- |
+| Programming Language | Python 3.13   |
+| Database             | SQLite        |
+| Dashboard            | Streamlit     |
+| Data Processing      | Pandas, NumPy |
+| Visualization        | Plotly        |
+| Excel Handling       | OpenPyXL      |
+| Testing              | Pytest        |
+| Version Control      | Git & GitHub  |
 
 ---
 
 # Project Structure
 
-```text
-N100_Financial_Intelligence_Platform/
-
+```
+N100_Financial_Intelligence_Platform
+│
+├── config/
+│
 ├── data/
 │   ├── raw/
 │   └── processed/
 │
+├── db/
+│   ├── schema.sql
+│   └── nifty100.db
+│
 ├── output/
-│   └── validation_failures.csv
+│   ├── valuation_summary.xlsx
+│   ├── valuation_flags.csv
+│   ├── screener_output.xlsx
+│   ├── peer_comparison.xlsx
+│   ├── capital_allocation.csv
+│   └── qa_test_results.csv
+│
+├── pages/
+│   ├── 01_home.py
+│   ├── 02_profile.py
+│   ├── 03_screener.py
+│   ├── 04_peers.py
+│   ├── 05_trends.py
+│   ├── 06_sectors.py
+│   ├── 07_capital.py
+│   └── 08_reports.py
+│
+├── reports/
 │
 ├── src/
-│   └── etl/
-│       ├── loader.py
-│       ├── normaliser.py
-│       ├── validator.py
-│       └── run_validation.py
+│   ├── analytics/
+│   ├── dashboard/
+│   ├── etl/
+│   └── screener/
 │
 ├── tests/
-│   └── etl/
-│       ├── test_loader.py
-│       ├── test_normaliser.py
-│       └── test_validator.py
 │
 ├── requirements.txt
-├── pytest.ini
 └── README.md
 ```
 
 ---
 
-# Day 01 – Environment Setup
+# Features
 
-## Objectives
+## ETL Pipeline
 
-* Create project repository
-* Configure Python virtual environment
-* Install dependencies
-* Establish project structure
-
-## Completed
-
-* Python Virtual Environment
-* Git Repository Setup
-* GitHub Integration
-* Pandas Installation
-* Pytest Installation
-* Project Folder Structure
-
-## Deliverables
-
-* Working development environment
-* Version-controlled repository
-* Dependency management
+- Excel data ingestion
+- Data normalization
+- SQLite database creation
+- Data quality validation
+- Audit report generation
 
 ---
 
-# Day 02 – Excel Loader & Normaliser
+## Financial Ratio Engine
 
-## Objectives
+Computes more than 50 KPIs including:
 
-Build reusable ETL utilities for loading and standardizing raw datasets.
-
-## Implemented
-
-### Excel Loader
-
-File:
-
-```python
-src/etl/loader.py
-```
-
-Features:
-
-* Load Excel files
-* Handle malformed headers
-* Clean column names
-* Standardize schemas
-
-### Normaliser
-
-File:
-
-```python
-src/etl/normaliser.py
-```
-
-Functions:
-
-* normalize_ticker()
-* normalize_year()
-
-Examples:
-
-```text
-tcs → TCS
-wipro → WIPRO
-
-Mar 2024 → 2024
-Dec 2023 → 2023
-```
-
-### Supported Datasets
-
-* companies.xlsx
-* profitandloss.xlsx
-* balancesheet.xlsx
-* financial_ratios.xlsx
-* stock_prices.xlsx
+- ROE
+- ROCE
+- ROA
+- Net Profit Margin
+- Operating Profit Margin
+- Debt-to-Equity
+- Interest Coverage
+- Asset Turnover
+- Revenue CAGR
+- PAT CAGR
+- EPS CAGR
+- Free Cash Flow
+- Capital Allocation Metrics
 
 ---
 
-## Unit Testing
+## Financial Screener
 
-Implemented comprehensive tests for:
+Supports dynamic filtering using:
 
-### Loader Tests
+- ROE
+- Debt-to-Equity
+- Revenue CAGR
+- PAT CAGR
+- Free Cash Flow
+- OPM
+- P/E
+- P/B
+- Dividend Yield
+- Interest Coverage
 
-* File loading
-* Header cleaning
-* Column validation
-* DataFrame generation
+Includes six predefined screening strategies:
 
-### Normaliser Tests
-
-* Ticker normalization
-* Year normalization
-* Edge cases
-* Invalid values
-
-Result:
-
-```text
-All tests passed
-```
-
----
-
-# Day 03 – Schema Validator
-
-## Objectives
-
-Implement a Data Quality framework to validate dataset integrity.
+- Quality Compounder
+- Value Pick
+- Growth Accelerator
+- Dividend Champion
+- Debt-Free Blue Chip
+- Turnaround Watch
 
 ---
 
-## Data Quality Rules
+## Peer Comparison
 
-### Critical Rules
-
-#### DQ-01
-
-Primary Key Uniqueness
-
-```text
-companies.id must be unique
-```
-
-Severity:
-
-```text
-CRITICAL
-```
+- Peer group selection
+- Radar chart comparison
+- Percentile rankings
+- KPI comparison table
 
 ---
 
-#### DQ-02
+## Trend Analysis
 
-Composite Key Validation
-
-```text
-(company_id, year) must be unique
-```
-
-Severity:
-
-```text
-CRITICAL
-```
+- Revenue trend
+- Profit trend
+- Financial ratio trends
+- Multi-metric comparison
+- YoY growth visualization
 
 ---
 
-#### DQ-03
+## Sector Analysis
 
-Foreign Key Integrity
-
-```text
-child.company_id
-must exist in
-companies.id
-```
-
-Severity:
-
-```text
-CRITICAL
-```
+- Sector bubble chart
+- Revenue vs ROE visualization
+- Market capitalization analysis
+- Sector median KPIs
 
 ---
 
-### Warning Rules
+## Capital Allocation
 
-#### DQ-04
+Visualizes company allocation strategies using:
 
-Balance Sheet Check
+- Treemap
+- Pattern summary
+- Company grouping
 
-```text
-Assets ≈ Liabilities + Equity
-Tolerance: 1%
+---
+
+## Annual Reports
+
+Provides:
+
+- Company search
+- Annual report links
+- Report availability status
+
+---
+
+## Valuation Module
+
+Calculates:
+
+- FCF Yield
+- Sector Median P/E
+- P/E vs Sector Median
+- Valuation Flags
+
+Outputs:
+
+- Fair
+- Discount
+- Caution
+
+---
+
+# Dashboard Screens
+
+The Streamlit dashboard contains eight interactive screens.
+
+## 1. Home
+
+Displays:
+
+- Summary KPI cards
+- Sector distribution
+- Top companies
+- Dashboard overview
+
+---
+
+## 2. Company Profile
+
+Displays:
+
+- Company details
+- Financial KPIs
+- Revenue history
+- ROE / ROCE trends
+- Pros & Cons
+
+---
+
+## 3. Financial Screener
+
+Displays:
+
+- Interactive filters
+- Preset screeners
+- Live filtering
+- CSV export
+
+---
+
+## 4. Peer Comparison
+
+Displays:
+
+- Radar chart
+- Peer KPI comparison
+- Benchmark comparison
+
+---
+
+## 5. Trend Analysis
+
+Displays:
+
+- Historical trends
+- Multiple KPI comparison
+- YoY growth
+
+---
+
+## 6. Sector Analysis
+
+Displays:
+
+- Bubble chart
+- Sector KPI analysis
+- Sector medians
+
+---
+
+## 7. Capital Allocation
+
+Displays:
+
+- Capital allocation treemap
+- Pattern summary
+- Company distribution
+
+---
+
+## 8. Annual Reports
+
+Displays:
+
+- Annual report links
+- PDF availability
+- Report status
+
+---
+
+# Dashboard Screenshots
+
+> Add screenshots after completing the project.
+
+Example:
+
+```
+docs/screenshots/
+
+home.png
+
+profile.png
+
+screener.png
+
+peer.png
+
+trend.png
+
+sector.png
+
+capital.png
+
+reports.png
 ```
 
----
+Then include:
 
-#### DQ-05
+```markdown
+## Home
 
-Operating Margin Cross Check
-
-```text
-OPM =
-Operating Profit / Sales
+![Home](docs/screenshots/home.png)
 ```
 
----
-
-#### DQ-06
-
-Positive Sales Validation
-
-```text
-Sales > 0
-```
+Repeat for all screens.
 
 ---
 
-#### DQ-07
+# Installation
 
-Company ID Not Null
-
----
-
-#### DQ-08
-
-Year Not Null
-
----
-
-#### DQ-09
-
-Sales Not Null
-
----
-
-#### DQ-10
-
-Year Range Validation
-
-```text
-2000 <= Year <= 2026
-```
-
----
-
-#### DQ-11
-
-Duplicate Company Names
-
----
-
-#### DQ-12
-
-Debt Validation
-
-```text
-Debt >= 0
-```
-
----
-
-#### DQ-13
-
-Stock Price Validation
-
-```text
-Close Price > 0
-```
-
----
-
-#### DQ-14
-
-Ratio Range Validation
-
-```text
--100 <= Ratio <= 1000
-```
-
----
-
-#### DQ-15
-
-Website Exists
-
----
-
-#### DQ-16
-
-NSE Profile Exists
-
----
-
-# Validation Framework
-
-File:
-
-```python
-src/etl/run_validation.py
-```
-
-Responsibilities:
-
-* Load datasets
-* Execute DQ rules
-* Aggregate failures
-* Generate validation report
-
-Output:
-
-```text
-output/validation_failures.csv
-```
-
----
-
-# Validation Results
-
-## Real Dataset Scan
-
-Completed on full N100 dataset.
-
-Results:
-
-```text
-Total Failures: 1571
-```
-
-Severity Breakdown:
-
-```text
-WARNING: 1571
-CRITICAL: 0
-```
-
----
-
-## Critical Validation Status
-
-### DQ-01
-
-```text
-PASS
-```
-
-### DQ-02
-
-```text
-PASS
-```
-
-### DQ-03
-
-```text
-PASS
-```
-
-Result:
-
-```text
-CRITICAL Failures = 0
-```
-
----
-
-# Testing
-
-Executed using:
+Clone the repository
 
 ```bash
-pytest tests -v
+git clone <repository-url>
 ```
 
-Result:
+Move into the project
 
-```text
-53 Passed
-0 Failed
+```bash
+cd N100_Financial_Intelligence_Platform
 ```
 
-Coverage includes:
+Create virtual environment
 
-* Loader
-* Normaliser
-* Validator
+```bash
+python -m venv venv
+```
 
----
+Activate virtual environment
 
-# Technologies Used
+Windows
 
-* Python 3.13
-* Pandas
-* Pytest
-* Git
-* GitHub
+```bash
+venv\Scripts\activate
+```
 
----
+Install dependencies
 
-# Current Project Status
-
-## Day 01
-
-Completed
-
-## Day 02
-
-Completed
-
-## Day 03
-
-Completed
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
-# Next Phase
+# Running the Dashboard
 
-Day 04 – Database Layer
+Start the Streamlit application
 
-Planned activities:
+```bash
+streamlit run src/dashboard/app.py
+```
 
-* PostgreSQL schema creation
-* Table definitions
-* Data loading pipeline
-* Database integration
-* Data persistence layer
+The application will be available at:
+
+```
+http://localhost:8501
+```
 
 ---
 
-## Author
+# Output Files
 
-Sri Gouri Sundara
+The project generates the following outputs:
+
+| File                   | Description                         |
+| ---------------------- | ----------------------------------- |
+| valuation_summary.xlsx | Valuation metrics for all companies |
+| valuation_flags.csv    | Discount & Caution companies        |
+| screener_output.xlsx   | Screener results                    |
+| peer_comparison.xlsx   | Peer comparison report              |
+| capital_allocation.csv | Capital allocation patterns         |
+| qa_test_results.csv    | QA testing results                  |
+
+---
+
+# Quality Assurance
+
+The application includes:
+
+- Unit testing
+- Integration testing
+- Missing value handling
+- Partial data handling
+- Dashboard performance testing
+- CSV validation
+- Streamlit page testing
+
+---
+
+# Sprint Summary
+
+### Sprint 1
+
+- ETL Pipeline
+- SQLite Database
+- Data Quality Rules
+
+### Sprint 2
+
+- Financial Ratio Engine
+- CAGR Engine
+- Capital Allocation
+- KPI Testing
+
+### Sprint 3
+
+- Financial Screener
+- Peer Comparison
+- Composite Scoring
+
+### Sprint 4
+
+- Streamlit Dashboard
+- Valuation Module
+- QA Testing
+- Documentation
+
+---
+
+# Performance
+
+- Dashboard pages load in under **3 seconds**
+- SQLite query caching implemented
+- Interactive Plotly visualizations
+- Streamlit caching for improved performance
+
+---
+
+# Future Enhancements
+
+- Live NSE/BSE market data integration
+- Portfolio tracking
+- Watchlist functionality
+- AI-based stock recommendations
+- User authentication
+- Cloud deployment
+
+---
+
+# Author
+
+**Sri Gouri Sundara**
+
+Bluestock Internship Project
 
 N100 Financial Intelligence Platform
-Bluestock Internship Project
+
+---
+
+# Acknowledgements
+
+This project was developed as part of the **Bluestock Internship Program** to demonstrate end-to-end financial analytics, data engineering, and dashboard development using Python and Streamlit.
