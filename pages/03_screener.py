@@ -10,12 +10,20 @@ Interactive filters and exports will be implemented on Day 24.
 
 import streamlit as st
 import pandas as pd
-
 from src.dashboard.utils.db import (
     get_screener_data,
     apply_filters,
     apply_preset,
     export_csv,
+)
+from src.dashboard.utils.helpers import (
+    safe_value,
+    safe_dataframe,
+    show_data_warning,
+    measure_load_time,
+    safe_plotly_chart,
+    safe_metric,
+    show_empty_message,
 )
 
 # -------------------------------------------------------

@@ -7,11 +7,19 @@ Trend Analysis Page
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-
 from src.dashboard.utils.db import (
     get_trend_companies,
     get_trend_metrics,
     get_company_timeseries,
+)
+from src.dashboard.utils.helpers import (
+    safe_value,
+    safe_dataframe,
+    show_data_warning,
+    measure_load_time,
+    safe_plotly_chart,
+    safe_metric,
+    show_empty_message,
 )
 
 # --------------------------------------------------------

@@ -7,13 +7,20 @@ Sector Analysis Page
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-
 from src.dashboard.utils.db import (
     get_sector_list,
     get_sector_data,
     get_sector_medians,
 )
-
+from src.dashboard.utils.helpers import (
+    safe_value,
+    safe_dataframe,
+    show_data_warning,
+    measure_load_time,
+    safe_plotly_chart,
+    safe_metric,
+    show_empty_message,
+)
 # -----------------------------------------------------
 # PAGE CONFIGURATION
 # -----------------------------------------------------

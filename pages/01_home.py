@@ -7,7 +7,6 @@ Home Dashboard
 
 from pathlib import Path
 import sys
-
 # Project root
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -19,7 +18,15 @@ from src.dashboard.utils.db import (
     get_sector_distribution,
     get_top_companies,
 )
-
+from src.dashboard.utils.helpers import (
+    safe_value,
+    safe_dataframe,
+    show_data_warning,
+    measure_load_time,
+    safe_plotly_chart,
+    safe_metric,
+    show_empty_message,
+)
 import streamlit as st
 import plotly.express as px
 # ---------------------------------------------------

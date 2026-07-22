@@ -1,0 +1,7 @@
+Test,Status,Details
+Company Count,PASS,92
+Financial Ratio Rows,PASS,1171
+Missing ROE,PASS,34
+Partial History Companies,PASS,6
+Valuation Summary,PASS,File Exists
+Dashboard Query Time,PASS,0.003 sec

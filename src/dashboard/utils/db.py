@@ -31,6 +31,39 @@ def get_connection():
 
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
+# =========================================================
+# Safe SQL Query
+# =========================================================
+
+def run_query(query: str, params=None):
+    """
+    Execute SQL safely.
+
+    Returns an empty DataFrame if an error occurs.
+    """
+
+    if params is None:
+        params = ()
+
+    try:
+        conn = get_connection()
+
+        df = pd.read_sql_query(
+            query,
+            conn,
+            params=params,
+        )
+
+        conn.close()
+
+        return df
+
+    except Exception as exc:
+
+        st.error(f"Database Error: {exc}")
+
+        return pd.DataFrame()
+
 
 # --------------------------------------------------
 # GENERIC QUERY
