@@ -772,3 +772,404 @@ print(get_peer_companies("IT Services"))
 print(get_peer_company_metrics("TCS"))
 
 print(get_peer_average_metrics("IT Services"))
+
+# ============================================================
+# DAY 25 DASHBOARD FUNCTIONS
+# Trend Analysis
+# Sector Analysis
+# Capital Allocation
+# Annual Reports
+# ============================================================
+
+import sqlite3
+import pandas as pd
+from pathlib import Path
+import streamlit as st
+
+# ------------------------------------------------------------
+# Database Path
+# ------------------------------------------------------------
+
+DB_PATH = Path(__file__).resolve().parents[3] / "db" / "nifty100.db"
+
+
+def get_connection():
+    return sqlite3.connect(DB_PATH)
+
+
+# ============================================================
+# TREND ANALYSIS
+# ============================================================
+
+@st.cache_data(ttl=600)
+def get_trend_companies():
+    """
+    Returns all companies for search dropdown.
+    """
+
+    conn = get_connection()
+
+    query = """
+    SELECT
+        id,
+        company_name
+    FROM companies
+    ORDER BY company_name
+    """
+
+    df = pd.read_sql(query, conn)
+
+    conn.close()
+
+    return df
+
+
+@st.cache_data(ttl=600)
+def get_trend_metrics():
+    """
+    Metrics available for Trend Analysis.
+    """
+
+    return {
+
+        "Revenue": "sales",
+
+        "Net Profit": "net_profit",
+
+        "ROE": "return_on_equity_pct",
+
+        "Net Profit Margin": "net_profit_margin_pct",
+
+        "Debt / Equity": "debt_to_equity",
+
+        "Revenue CAGR": "revenue_cagr_5yr",
+
+        "PAT CAGR": "pat_cagr_5yr",
+
+        "Asset Turnover": "asset_turnover",
+
+        "Free Cash Flow": "free_cash_flow_cr",
+
+    }
+
+
+@st.cache_data(ttl=600)
+def get_company_timeseries(company_id):
+    """
+    Returns 10-year financial history.
+    """
+
+    conn = get_connection()
+
+    query = """
+    SELECT
+
+        fr.year,
+
+        pl.sales,
+
+        pl.net_profit,
+
+        fr.return_on_equity_pct,
+
+        fr.net_profit_margin_pct,
+
+        fr.debt_to_equity,
+
+        fr.revenue_cagr_5yr,
+
+        fr.pat_cagr_5yr,
+
+        fr.asset_turnover,
+
+        fr.free_cash_flow_cr
+
+    FROM financial_ratios fr
+
+    LEFT JOIN profitandloss pl
+
+        ON fr.company_id = pl.company_id
+       AND fr.year = pl.year
+
+    WHERE fr.company_id = ?
+
+    ORDER BY fr.year
+    """
+
+    df = pd.read_sql(query, conn, params=[company_id])
+
+    conn.close()
+
+    return df
+
+
+# ============================================================
+# SECTOR ANALYSIS
+# ============================================================
+
+@st.cache_data(ttl=600)
+def get_sector_list():
+    """
+    Returns all broad sectors.
+    """
+
+    conn = get_connection()
+
+    query = """
+    SELECT DISTINCT broad_sector
+
+    FROM sectors
+
+    ORDER BY broad_sector
+    """
+
+    df = pd.read_sql(query, conn)
+
+    conn.close()
+
+    return df
+
+
+@st.cache_data(ttl=600)
+def get_sector_data(sector_name, year=2024):
+
+    conn = get_connection()
+
+    query = """
+    SELECT
+
+        c.id,
+        c.company_name,
+        s.sub_sector,
+
+        pl.sales,
+
+        fr.return_on_equity_pct,
+
+        s.market_cap_category,
+
+        fr.composite_quality_score
+
+    FROM sectors s
+
+    JOIN companies c
+        ON s.company_id=c.id
+
+    LEFT JOIN financial_ratios fr
+        ON c.id=fr.company_id
+        AND fr.year=?
+
+    LEFT JOIN profitandloss pl
+        ON c.id=pl.company_id
+        AND pl.year=?
+
+    WHERE s.broad_sector=?
+    """
+
+    df = pd.read_sql(
+        query,
+        conn,
+        params=[year, year, sector_name]
+    )
+    print(df.columns.tolist())
+
+    conn.close()
+
+    return df
+
+
+@st.cache_data(ttl=600)
+def get_sector_medians(sector_name, year=2024):
+    """
+    Median KPIs for sector bar chart.
+    """
+
+    conn = get_connection()
+
+    query = """
+    SELECT
+
+        median(return_on_equity_pct) AS median_roe,
+
+        median(net_profit_margin_pct) AS median_npm,
+
+        median(debt_to_equity) AS median_de,
+
+        median(revenue_cagr_5yr) AS median_revenue,
+
+        median(pat_cagr_5yr) AS median_pat
+
+    FROM financial_ratios fr
+
+    JOIN sectors s
+
+        ON fr.company_id = s.company_id
+
+    WHERE
+
+        s.broad_sector = ?
+
+        AND fr.year = ?
+    """
+
+    try:
+
+        df = pd.read_sql(
+
+            query,
+
+            conn,
+
+            params=[sector_name, year]
+
+        )
+
+    except Exception:
+
+        # SQLite builds without MEDIAN() support
+        raw = pd.read_sql(
+            """
+            SELECT
+                fr.return_on_equity_pct,
+                fr.net_profit_margin_pct,
+                fr.debt_to_equity,
+                fr.revenue_cagr_5yr,
+                fr.pat_cagr_5yr
+            FROM financial_ratios fr
+            JOIN sectors s
+              ON fr.company_id=s.company_id
+            WHERE s.broad_sector=?
+              AND fr.year=?
+            """,
+            conn,
+            params=[sector_name, year]
+        )
+
+        df = pd.DataFrame([{
+
+            "median_roe":
+                raw["return_on_equity_pct"].median(),
+
+            "median_npm":
+                raw["net_profit_margin_pct"].median(),
+
+            "median_de":
+                raw["debt_to_equity"].median(),
+
+            "median_revenue":
+                raw["revenue_cagr_5yr"].median(),
+
+            "median_pat":
+                raw["pat_cagr_5yr"].median(),
+
+        }])
+
+    conn.close()
+
+    return df
+
+
+# ============================================================
+# CAPITAL ALLOCATION
+# ============================================================
+
+@st.cache_data(ttl=600)
+def get_capital_patterns():
+    """
+    Returns all capital allocation patterns.
+
+    Uses generated CSV if available.
+    """
+
+    csv_path = (
+        Path(__file__).resolve().parents[3]
+        / "output"
+        / "capital_allocation.csv"
+    )
+
+    if csv_path.exists():
+
+        return pd.read_csv(csv_path)
+
+    return pd.DataFrame()
+
+
+@st.cache_data(ttl=600)
+def get_capital_companies(pattern):
+    """
+    Companies belonging to selected pattern.
+    """
+
+    df = get_capital_patterns()
+
+    if df.empty:
+
+        return df
+
+    return df[df["pattern_label"] == pattern]
+
+
+# ============================================================
+# ANNUAL REPORTS
+# ============================================================
+
+@st.cache_data(ttl=600)
+def get_report_companies():
+    """
+    Company search list.
+    """
+
+    return get_trend_companies()
+
+
+@st.cache_data(ttl=600)
+def get_annual_reports(company_id):
+    """
+    Returns report links.
+
+    Gracefully handles projects
+    without reports table.
+    """
+
+    conn = get_connection()
+
+    try:
+
+        query = """
+        SELECT
+
+            year,
+
+            annual_report
+
+        FROM documents
+
+        WHERE company_id=?
+
+        ORDER BY year DESC
+        """
+
+        df = pd.read_sql(
+
+            query,
+
+            conn,
+
+            params=[company_id]
+
+        )
+
+    except Exception:
+
+        df = pd.DataFrame(
+
+            columns=[
+                "year",
+                "annual_report"
+            ]
+
+        )
+
+    conn.close()
+
+    return df
