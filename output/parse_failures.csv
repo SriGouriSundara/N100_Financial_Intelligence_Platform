@@ -1,0 +1,16 @@
+company_id,metric_type,original_text,reason
+SBILIFE,compounded_sales_growth,TTM:            43%,Regex Pattern Not Matched
+SBILIFE,compounded_profit_growth,TTM:                 18%,Regex Pattern Not Matched
+SBILIFE,roe,Last Year:      12%,Regex Pattern Not Matched
+TCS,compounded_sales_growth,TTM:            5%,Regex Pattern Not Matched
+TCS,compounded_profit_growth,TTM:                 8%,Regex Pattern Not Matched
+TCS,roe,Last Year:       52%,Regex Pattern Not Matched
+WIPRO,compounded_sales_growth,TTM:           -3%,Regex Pattern Not Matched
+WIPRO,compounded_profit_growth,TTM:                 1%,Regex Pattern Not Matched
+WIPRO,roe,Last Year:       14%,Regex Pattern Not Matched
+HDFCBANK,compounded_sales_growth,TTM:            47%,Regex Pattern Not Matched
+HDFCBANK,compounded_profit_growth,TTM:                27%,Regex Pattern Not Matched
+HDFCBANK,roe,Last Year:    17%,Regex Pattern Not Matched
+INFY,compounded_sales_growth,TTM:            3%,Regex Pattern Not Matched
+INFY,compounded_profit_growth,TTM:                 8%,Regex Pattern Not Matched
+INFY,roe,Last Year:     32%,Regex Pattern Not Matched
