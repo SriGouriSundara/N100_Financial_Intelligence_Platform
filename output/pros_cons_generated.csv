@@ -1,0 +1,394 @@
+company_id,type,rule_id,text,confidence_pct
+ABB,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+ABB,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,81
+ABB,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,63
+ABB,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+ABB,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,73
+ABB,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+ADANIENSOL,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+ADANIENSOL,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,65
+ADANIENSOL,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,78
+ADANIENT,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+ADANIENT,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,68
+ADANIENT,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,100
+ADANIENT,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,93
+ADANIENT,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+ADANIGREEN,con,CON_01,Debt-to-equity ratio of 6.38 is elevated for a non-financial company and warrants monitoring.,68
+ADANIGREEN,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,99
+ADANIGREEN,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+ADANIPORTS,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+ADANIPORTS,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,69
+ADANIPORTS,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+ADANIPORTS,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+ADANIPOWER,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+ADANIPOWER,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,86
+ADANIPOWER,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+ADANIPOWER,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,62
+ADANIPOWER,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,82
+ADANIPOWER,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+AMBUJACEM,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+AMBUJACEM,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,96
+APOLLOHOSP,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+APOLLOHOSP,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+APOLLOHOSP,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,92
+APOLLOHOSP,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,89
+ASIANPAINT,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+ASIANPAINT,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,72
+ASIANPAINT,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+ASIANPAINT,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,60
+ASIANPAINT,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+ASIANPAINT,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,71
+ASIANPAINT,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+ATGL,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+ATGL,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,72
+ATGL,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,67
+ATGL,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,61
+ATGL,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,79
+AXISBANK,con,CON_01,Debt-to-equity ratio of 8.25 is elevated for a non-financial company and warrants monitoring.,72
+AXISBANK,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,79
+AXISBANK,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,99
+AXISBANK,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100
+BAJAJ-AUTO,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+BAJAJ-AUTO,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,64
+BAJAJ-AUTO,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+BAJAJ-AUTO,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+BAJAJFINSV,con,CON_01,Debt-to-equity ratio of 4.66 is elevated for a non-financial company and warrants monitoring.,65
+BAJAJFINSV,con,CON_02,Free cash flow negative for 3 consecutive years raises concern about cash generation quality.,95
+BAJAJFINSV,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,66
+BAJAJFINSV,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,71
+BAJAJFINSV,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,84
+BAJAJFINSV,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,67
+BAJAJFINSV,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,71
+BAJAJHLDNG,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+BAJAJHLDNG,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,93
+BAJAJHLDNG,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+BAJAJHLDNG,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+BAJAJHLDNG,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,67
+BAJAJHLDNG,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+BAJFINANCE,con,CON_01,Debt-to-equity ratio of 3.74 is elevated for a non-financial company and warrants monitoring.,63
+BAJFINANCE,con,CON_02,Free cash flow negative for 3 consecutive years raises concern about cash generation quality.,95
+BAJFINANCE,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+BAJFINANCE,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,78
+BAJFINANCE,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,68
+BAJFINANCE,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,78
+BAJFINANCE,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+BAJFINANCE,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,85
+BANKBARODA,con,CON_01,Debt-to-equity ratio of 12.14 is elevated for a non-financial company and warrants monitoring.,80
+BANKBARODA,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+BANKBARODA,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,64
+BANKBARODA,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,84
+BANKBARODA,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,100
+BANKBARODA,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100
+BANKBARODA,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+BEL,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+BEL,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100
+BEL,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+BEL,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+BHARTIARTL,con,CON_01,Debt-to-equity ratio of 2.59 is elevated for a non-financial company and warrants monitoring.,61
+BHARTIARTL,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+BHARTIARTL,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,96
+BHARTIARTL,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100
+BHEL,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+BHEL,pro,PRO_DEFAULT,Business exhibits stable operating performance based on the available financial metrics.,65
+BOSCHLTD,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+BOSCHLTD,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+BOSCHLTD,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+BOSCHLTD,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+BPCL,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+BPCL,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,71
+BPCL,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,62
+BPCL,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,86
+BRITANNIA,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+BRITANNIA,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100
+BRITANNIA,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,81
+BRITANNIA,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+CANBK,con,CON_01,Debt-to-equity ratio of 14.87 is elevated for a non-financial company and warrants monitoring.,85
+CANBK,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+CANBK,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,66
+CANBK,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,93
+CANBK,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,100
+CANBK,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100
+CANBK,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+CHOLAFIN,con,CON_01,Debt-to-equity ratio of 7.38 is elevated for a non-financial company and warrants monitoring.,70
+CHOLAFIN,con,CON_02,Free cash flow negative for 3 consecutive years raises concern about cash generation quality.,95
+CHOLAFIN,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+CHOLAFIN,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,73
+CHOLAFIN,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,66
+CHOLAFIN,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,66
+CHOLAFIN,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,82
+CHOLAFIN,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,74
+CIPLA,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+CIPLA,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+CIPLA,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+CIPLA,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,65
+CIPLA,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+CIPLA,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,73
+COALINDIA,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+COALINDIA,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100
+COALINDIA,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+COALINDIA,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+COALINDIA,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,62
+COALINDIA,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,63
+DABUR,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+DABUR,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+DABUR,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,86
+DIVISLAB,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+DIVISLAB,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,66
+DIVISLAB,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+DLF,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+DLF,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+DLF,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,76
+DLF,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+DMART,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+DMART,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,70
+DMART,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,65
+DMART,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+DMART,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,75
+DRREDDY,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+DRREDDY,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+DRREDDY,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,66
+DRREDDY,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,66
+DRREDDY,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+DRREDDY,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,77
+EICHERMOT,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+EICHERMOT,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+EICHERMOT,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,62
+EICHERMOT,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+EICHERMOT,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+GAIL,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+GAIL,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,87
+GODREJCP,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+GODREJCP,pro,PRO_DEFAULT,Business exhibits stable operating performance based on the available financial metrics.,65
+GRASIM,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+GRASIM,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,78
+GRASIM,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,85
+HAL,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+HAL,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100
+HAL,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,74
+HAL,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,72
+HAL,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+HAL,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,83
+HAVELLS,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+HAVELLS,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90
+HCLTECH,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+HCLTECH,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,64
+HCLTECH,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+HCLTECH,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+HCLTECH,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+HDFCBANK,con,CON_01,Debt-to-equity ratio of 6.81 is elevated for a non-financial company and warrants monitoring.,69
+HDFCBANK,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,73
+HDFCBANK,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+HDFCBANK,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,67
+HDFCBANK,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,60
+HDFCLIFE,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+HDFCLIFE,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,72
+HDFCLIFE,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+HDFCLIFE,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+HEROMOTOCO,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+HEROMOTOCO,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+HEROMOTOCO,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+HEROMOTOCO,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+HEROMOTOCO,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+HINDALCO,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+HINDALCO,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+HINDALCO,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+HINDUNILVR,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+HINDUNILVR,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+HINDUNILVR,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+HINDUNILVR,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+HINDUNILVR,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+ICICIBANK,con,CON_01,Debt-to-equity ratio of 6.45 is elevated for a non-financial company and warrants monitoring.,68
+ICICIBANK,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+ICICIBANK,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,64
+ICICIBANK,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+ICICIBANK,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,100
+ICICIBANK,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100
+ICICIBANK,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+ICICIGI,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+ICICIGI,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+ICICIGI,pro,PRO_03,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100
+ICICIGI,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+ICICIGI,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+ICICIPRULI,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+ICICIPRULI,pro,PRO_03,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100
+ICICIPRULI,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,63
+ICICIPRULI,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+ICICIPRULI,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+INDIGO,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+INDIGO,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+INDIGO,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,68
+INDIGO,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+INDIGO,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,100
+INDIGO,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,85
+INDIGO,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100
+INDIGO,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+INDUSINDBK,con,CON_01,Debt-to-equity ratio of 6.89 is elevated for a non-financial company and warrants monitoring.,69
+INDUSINDBK,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+INDUSINDBK,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,60
+INDUSINDBK,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,87
+INDUSINDBK,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,64
+INDUSINDBK,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,61
+INDUSINDBK,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+INFY,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+INFY,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,80
+INFY,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+INFY,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+IOC,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+IOC,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,60
+IOC,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,60
+IOC,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,70
+IRCTC,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+IRCTC,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,91
+IRCTC,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,65
+IRCTC,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,78
+IRCTC,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,78
+IRCTC,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+IRCTC,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,86
+IRFC,con,CON_01,Debt-to-equity ratio of 7.83 is elevated for a non-financial company and warrants monitoring.,71
+IRFC,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,68
+IRFC,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+IRFC,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,66
+IRFC,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,70
+ITC,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+ITC,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,73
+ITC,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+ITC,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,84
+ITC,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+JINDALSTEL,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+JINDALSTEL,pro,PRO_DEFAULT,Business exhibits stable operating performance based on the available financial metrics.,65
+JIOFIN,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+JIOFIN,pro,PRO_03,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100
+JIOFIN,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+JIOFIN,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+JSWENERGY,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+JSWENERGY,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+JSWENERGY,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,60
+JSWENERGY,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,70
+JSWSTEEL,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+JSWSTEEL,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,61
+KOTAKBANK,con,CON_01,Debt-to-equity ratio of 4.00 is elevated for a non-financial company and warrants monitoring.,64
+KOTAKBANK,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+KOTAKBANK,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,60
+KOTAKBANK,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,68
+KOTAKBANK,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+LICI,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+LICI,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100
+LICI,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+LICI,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,100
+LICI,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+LODHA,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+LODHA,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,61
+LT,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+LT,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100
+LTIM,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+LTIM,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,70
+LTIM,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+LTIM,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,90
+LTIM,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,69
+LTIM,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+M&M,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+M&M,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,62
+MARUTI,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+MARUTI,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+MARUTI,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+MARUTI,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+MOTHERSON,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+MOTHERSON,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+MOTHERSON,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+NAUKRI,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+NAUKRI,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,64
+NAUKRI,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,66
+NAUKRI,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,97
+NESTLEIND,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+NESTLEIND,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100
+NESTLEIND,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+NESTLEIND,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+NESTLEIND,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,60
+NHPC,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+NHPC,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+NHPC,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+NHPC,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,62
+NTPC,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+NTPC,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,67
+ONGC,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+ONGC,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+ONGC,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,62
+PFC,con,CON_01,Debt-to-equity ratio of 8.27 is elevated for a non-financial company and warrants monitoring.,72
+PFC,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,70
+PFC,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,83
+PIDILITIND,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+PIDILITIND,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+PNB,con,CON_01,Debt-to-equity ratio of 3.68 is elevated for a non-financial company and warrants monitoring.,63
+PNB,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100
+PNB,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,61
+POWERGRID,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+POWERGRID,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+POWERGRID,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+RECLTD,con,CON_01,Debt-to-equity ratio of 6.58 is elevated for a non-financial company and warrants monitoring.,69
+RECLTD,con,CON_02,Free cash flow negative for 3 consecutive years raises concern about cash generation quality.,95
+RECLTD,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,100
+RECLTD,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,69
+RELIANCE,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+RELIANCE,pro,PRO_DEFAULT,Business exhibits stable operating performance based on the available financial metrics.,65
+SBILIFE,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+SBILIFE,pro,PRO_03,Debt-free balance sheet provides financial flexibility and eliminates interest burden,100
+SBILIFE,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,78
+SBILIFE,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+SBIN,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+SBIN,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,100
+SBIN,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100
+SHREECEM,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+SHREECEM,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,79
+SHRIRAMFIN,con,CON_01,Debt-to-equity ratio of 3.97 is elevated for a non-financial company and warrants monitoring.,63
+SHRIRAMFIN,con,CON_02,Free cash flow negative for 3 consecutive years raises concern about cash generation quality.,95
+SHRIRAMFIN,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,67
+SHRIRAMFIN,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,67
+SHRIRAMFIN,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,66
+SHRIRAMFIN,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+SIEMENS,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+SIEMENS,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+SIEMENS,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,69
+SIEMENS,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+SUNPHARMA,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+SUNPHARMA,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,63
+SUNPHARMA,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,69
+SUNPHARMA,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+SUNPHARMA,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,88
+TATACONSUM,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+TATACONSUM,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+TATACONSUM,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,61
+TATACONSUM,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,63
+TATACONSUM,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,90
+TATAMOTORS,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+TATAMOTORS,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+TATAPOWER,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+TATAPOWER,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,61
+TATASTEEL,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+TATASTEEL,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+TCS,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+TCS,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,100
+TCS,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+TCS,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,63
+TCS,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,100
+TECHM,con,CON_03,Operating margins declining for 3 consecutive years suggest pricing or cost pressure.,85
+TECHM,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+TECHM,pro,PRO_07,Very high interest coverage ratio reflects negligible financial stress from debt servicing,67
+TITAN,con,CON_01,Debt-to-equity ratio of 2.22 is elevated for a non-financial company and warrants monitoring.,60
+TITAN,pro,PRO_01,Consistently high return on equity above 20% demonstrates exceptional capital efficiency,78
+TITAN,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,71
+TITAN,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,60
+TITAN,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,69
+TITAN,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+TORNTPHARM,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+TORNTPHARM,pro,PRO_02,Strong free cash flow generation over 5 years signals healthy business fundamentals,95
+TORNTPHARM,pro,PRO_05,Operating profit margin above 25% indicates strong pricing power and cost discipline,72
+TORNTPHARM,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,81
+TORNTPHARM,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,90
+TORNTPHARM,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+TRENT,con,CON_DEFAULT,No significant financial weaknesses were detected by the automated rule engine. Investors should continue monitoring future financial performance.,65
+TRENT,pro,PRO_04,Revenue growing at above 15% CAGR over 5 years reflects strong business momentum,100
+TRENT,pro,PRO_06,Net profit compounding at above 20% over 5 years creates significant shareholder value,100
+TRENT,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,100
+TRENT,pro,PRO_10,Return on equity improving for 3 consecutive years shows strengthening business quality,85
+TVSMOTOR,con,CON_02,Free cash flow negative for 3 consecutive years raises concern about cash generation quality.,95
+TVSMOTOR,pro,PRO_09,Earnings per share growing above 15% CAGR indicates strong earnings quality and compounding,68
