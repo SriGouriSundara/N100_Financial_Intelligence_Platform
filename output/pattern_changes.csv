@@ -1,0 +1,93 @@
+company_id,previous_year,previous_pattern,current_year,current_pattern,changed
+ABB,2023,Reinvestor,2024,Shareholder Returns,True
+ADANIENSOL,2023,Mixed,2024,Shareholder Returns,True
+ADANIENT,2023,Shareholder Returns,2024,Mixed,True
+ADANIGREEN,2023,Shareholder Returns,2024,Mixed,True
+ADANIPORTS,2023,Shareholder Returns,2024,Shareholder Returns,False
+ADANIPOWER,2023,Liquidating Assets,2024,Liquidating Assets,False
+AMBUJACEM,2023,Mixed,2024,Mixed,False
+APOLLOHOSP,2023,Shareholder Returns,2024,Shareholder Returns,False
+ASIANPAINT,2023,Reinvestor,2024,Shareholder Returns,True
+ATGL,2023,Mixed,2024,Shareholder Returns,True
+AXISBANK,2023,Mixed,2024,Growth Funded by Debt,True
+BAJAJ-AUTO,2023,Liquidating Assets,2024,Reinvestor,True
+BAJAJFINSV,2023,Growth Funded by Debt,2024,Growth Funded by Debt,False
+BAJAJHLDNG,2023,Reinvestor,2024,Reinvestor,False
+BAJFINANCE,2023,Growth Funded by Debt,2024,Growth Funded by Debt,False
+BANKBARODA,2023,Pre-Revenue,2024,Growth Funded by Debt,True
+BEL,2023,Liquidating Assets,2024,Shareholder Returns,True
+BHARTIARTL,2023,Shareholder Returns,2024,Shareholder Returns,False
+BHEL,2023,Distress Signal,2024,Distress Signal,False
+BOSCHLTD,2023,Liquidating Assets,2024,Liquidating Assets,False
+BPCL,2023,Shareholder Returns,2024,Shareholder Returns,False
+BRITANNIA,2023,Shareholder Returns,2024,Liquidating Assets,True
+CANBK,2023,Growth Funded by Debt,2024,Reinvestor,True
+CHOLAFIN,2023,Growth Funded by Debt,2024,Growth Funded by Debt,False
+CIPLA,2023,Shareholder Returns,2024,Reinvestor,True
+COALINDIA,2023,Shareholder Returns,2024,Reinvestor,True
+DABUR,2023,Reinvestor,2024,Shareholder Returns,True
+DIVISLAB,2023,Shareholder Returns,2024,Reinvestor,True
+DLF,2023,Shareholder Returns,2024,Mixed,True
+DMART,2023,Shareholder Returns,2024,Shareholder Returns,False
+DRREDDY,2023,Shareholder Returns,2024,Reinvestor,True
+EICHERMOT,2023,Reinvestor,2024,Reinvestor,False
+GAIL,2023,Mixed,2024,Shareholder Returns,True
+GODREJCP,2023,Shareholder Returns,2024,Mixed,True
+GRASIM,2023,Growth Funded by Debt,2024,Growth Funded by Debt,False
+HAL,2023,Shareholder Returns,2024,Shareholder Returns,False
+HAVELLS,2023,Liquidating Assets,2024,Shareholder Returns,True
+HCLTECH,2023,Shareholder Returns,2024,Shareholder Returns,False
+HDFCBANK,2023,Mixed,2024,Liquidating Assets,True
+HDFCLIFE,2023,Mixed,2024,Shareholder Returns,True
+HEROMOTOCO,2023,Reinvestor,2024,Shareholder Returns,True
+HINDALCO,2023,Shareholder Returns,2024,Shareholder Returns,False
+HINDUNILVR,2023,Reinvestor,2024,Shareholder Returns,True
+ICICIBANK,2023,Growth Funded by Debt,2024,Mixed,True
+ICICIGI,2023,Shareholder Returns,2024,Shareholder Returns,False
+ICICIPRULI,2023,Reinvestor,2024,Unclassified,True
+INDIGO,2023,Reinvestor,2024,Shareholder Returns,True
+INDUSINDBK,2023,Growth Funded by Debt,2024,Pre-Revenue,True
+INFY,2023,Reinvestor,2024,Reinvestor,False
+IOC,2023,Shareholder Returns,2024,Shareholder Returns,False
+IRCTC,2023,Reinvestor,2024,Reinvestor,False
+IRFC,2023,Distress Signal,2024,Shareholder Returns,True
+ITC,2023,Reinvestor,2024,Liquidating Assets,True
+JINDALSTEL,2023,Shareholder Returns,2024,Mixed,True
+JIOFIN,2023,Shareholder Returns,2024,Unclassified,True
+JSWENERGY,2023,Mixed,2024,Mixed,False
+JSWSTEEL,2023,Shareholder Returns,2024,Shareholder Returns,False
+KOTAKBANK,2023,Growth Funded by Debt,2024,Mixed,True
+LICI,2023,Shareholder Returns,2024,Reinvestor,True
+LODHA,2023,Liquidating Assets,2024,Mixed,True
+LT,2023,Shareholder Returns,2024,Liquidating Assets,True
+LTIM,2023,Reinvestor,2024,Shareholder Returns,True
+M&M,2023,Growth Funded by Debt,2024,Growth Funded by Debt,False
+MARUTI,2023,Shareholder Returns,2024,Shareholder Returns,False
+MOTHERSON,2023,Shareholder Returns,2024,Mixed,True
+NAUKRI,2023,Mixed,2024,Mixed,False
+NESTLEIND,2023,Shareholder Returns,2024,Shareholder Returns,False
+NHPC,2023,Shareholder Returns,2024,Shareholder Returns,False
+NTPC,2023,Shareholder Returns,2024,Shareholder Returns,False
+ONGC,2023,Shareholder Returns,2024,Shareholder Returns,False
+PFC,2023,Growth Funded by Debt,2024,Growth Funded by Debt,False
+PIDILITIND,2023,Shareholder Returns,2024,Shareholder Returns,False
+PNB,2023,Mixed,2024,Growth Funded by Debt,True
+POWERGRID,2023,Shareholder Returns,2024,Shareholder Returns,False
+RECLTD,2023,Growth Funded by Debt,2024,Growth Funded by Debt,False
+RELIANCE,2023,Mixed,2024,Shareholder Returns,True
+SBILIFE,2023,Shareholder Returns,2024,Shareholder Returns,False
+SBIN,2023,Growth Funded by Debt,2024,Reinvestor,True
+SHREECEM,2023,Shareholder Returns,2024,Shareholder Returns,False
+SHRIRAMFIN,2023,Distress Signal,2024,Growth Funded by Debt,True
+SIEMENS,2023,Reinvestor,2024,Reinvestor,False
+SUNPHARMA,2023,Mixed,2024,Shareholder Returns,True
+TATACONSUM,2023,Shareholder Returns,2024,Mixed,True
+TATAMOTORS,2023,Shareholder Returns,2024,Shareholder Returns,False
+TATAPOWER,2023,Mixed,2024,Shareholder Returns,True
+TATASTEEL,2023,Shareholder Returns,2024,Reinvestor,True
+TCS,2023,Liquidating Assets,2024,Liquidating Assets,False
+TECHM,2023,Shareholder Returns,2024,Shareholder Returns,False
+TITAN,2023,Mixed,2024,Reinvestor,True
+TORNTPHARM,2023,Mixed,2024,Shareholder Returns,True
+TRENT,2023,Shareholder Returns,2024,Reinvestor,True
+TVSMOTOR,2023,Growth Funded by Debt,2024,Growth Funded by Debt,False
