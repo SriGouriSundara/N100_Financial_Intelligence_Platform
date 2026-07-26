@@ -1,4 +1,295 @@
 """
+Sprint 2 - Day 11
+Cash Flow KPI Engine
+"""
+
+import csv
+from pathlib import Path
+import pandas as pd
+import re
+
+def normalize_year(value):
+
+    if pd.isna(value):
+        return None
+
+    value = str(value).strip()
+
+    m = re.search(r"(19\d{2}|20\d{2})", value)
+    if m:
+        return int(m.group(1))
+
+    m = re.search(r"-(\d{2})$", value)
+    if m:
+        yy = int(m.group(1))
+        return 2000 + yy if yy < 50 else 1900 + yy
+
+    return None
+
+# ==========================================================
+# FREE CASH FLOW
+# ==========================================================
+
+def free_cash_flow(operating_activity, investing_activity):
+    """
+    Formula:
+    CFO + Investing Cash Flow
+
+    Negative FCF is allowed.
+    """
+    return operating_activity + investing_activity
+
+# ==========================================================
+# CFO QUALITY SCORE
+# ==========================================================
+
+def cfo_quality_score(cfo_list, pat_list):
+    """
+    Calculates average CFO/PAT ratio over 5 years.
+
+    Returns:
+        average_ratio
+        quality_label
+    """
+
+    ratios = []
+
+    for cfo, pat in zip(cfo_list, pat_list):
+
+        if pat == 0:
+            return None, None
+
+        ratios.append(cfo / pat)
+
+    average = sum(ratios) / len(ratios)
+
+    if average > 1:
+        label = "High Quality"
+
+    elif average >= 0.5:
+        label = "Moderate"
+
+    else:
+        label = "Accrual Risk"
+
+    return round(average, 2), label
+
+# ==========================================================
+# CAPEX INTENSITY
+# ==========================================================
+
+def capex_intensity(investing_activity, sales):
+
+    if sales == 0:
+        return None, None
+
+    value = abs(investing_activity) / sales * 100
+
+    if value < 3:
+        label = "Asset Light"
+
+    elif value <= 8:
+        label = "Moderate"
+
+    else:
+        label = "Capital Intensive"
+
+    return round(value, 2), label
+
+
+# ==========================================================
+# FCF CONVERSION
+# ==========================================================
+
+def fcf_conversion_rate(
+    free_cash_flow_value,
+    operating_profit
+):
+
+    if operating_profit == 0:
+        return None
+
+    return (
+        free_cash_flow_value /
+        operating_profit
+    ) * 100
+
+
+# ==========================================================
+# CAPITAL ALLOCATION
+# ==========================================================
+
+def capital_allocation_pattern(
+    cfo,
+    cfi,
+    cff,
+    cfo_pat_ratio=0
+):
+
+    signs = (
+        "+" if cfo >= 0 else "-",
+        "+" if cfi >= 0 else "-",
+        "+" if cff >= 0 else "-"
+    )
+
+    mapping = {
+
+        ("+", "-", "-"):
+            "Shareholder Returns"
+            if cfo_pat_ratio > 1
+            else "Reinvestor",
+
+        ("+", "+", "-"):
+            "Liquidating Assets",
+
+        ("-", "+", "+"):
+            "Distress Signal",
+
+        ("-", "-", "+"):
+            "Growth Funded by Debt",
+
+        ("+", "+", "+"):
+            "Cash Accumulator",
+
+        ("-", "-", "-"):
+            "Pre-Revenue",
+
+        ("+", "-", "+"):
+            "Mixed"
+
+    }
+
+    return signs, mapping.get(signs, "Unclassified")
+def generate_historical_capital_allocation(
+    cashflow,
+    pnl
+):
+
+    print_header("Generating Historical Capital Allocation")
+
+    rows = []
+
+    # Company list (already filtered to master list in main())
+    companies = sorted(
+        cashflow["company_id"].astype(str).unique()
+    )
+
+    # Historical years
+    years = sorted(
+        cashflow["year"]
+        .dropna()
+        .astype(int)
+        .unique()
+    )
+
+    for company in companies:
+
+        company_cf = cashflow[
+            cashflow["company_id"].astype(str) == company
+        ]
+
+        company_pl = pnl[
+            pnl["company_id"].astype(str) == company
+        ]
+
+        for year in years:
+
+            cf_year = company_cf[
+                company_cf["year"] == year
+            ]
+
+            if cf_year.empty:
+                continue
+
+            pl_year = company_pl[
+                company_pl["year"] == year
+            ]
+
+            cf_row = cf_year.iloc[0]
+
+            cfo = cf_row["operating_activity"]
+            cfi = cf_row["investing_activity"]
+            cff = cf_row["financing_activity"]
+
+            # Skip incomplete records
+            if (
+                pd.isna(cfo)
+                or pd.isna(cfi)
+                or pd.isna(cff)
+            ):
+                continue
+
+            pat = 0
+
+            if (
+                not pl_year.empty
+                and pd.notna(pl_year.iloc[0]["net_profit"])
+            ):
+                pat = pl_year.iloc[0]["net_profit"]
+
+            ratio = 0
+
+            if (
+                pd.notna(pat)
+                and pat != 0
+            ):
+                ratio = cfo / pat
+
+            signs, label = capital_allocation_pattern(
+                cfo,
+                cfi,
+                cff,
+                ratio
+            )
+
+            rows.append([
+                company,
+                year,
+                signs[0],
+                signs[1],
+                signs[2],
+                label
+            ])
+
+    print(f"Companies : {len(companies)}")
+    print(f"Years     : {len(years)}")
+    print(f"Rows      : {len(rows)}")
+
+    export_capital_allocation(rows)
+
+    print("Saved -> capital_allocation.csv")
+
+# ==========================================================
+# EXPORT CSV
+# ==========================================================
+
+def export_capital_allocation(
+    rows,
+    output_file="output/capital_allocation.csv"
+):
+
+    Path("output").mkdir(exist_ok=True)
+
+    with open(
+        output_file,
+        "w",
+        newline="",
+        encoding="utf-8"
+    ) as csvfile:
+
+        writer = csv.writer(csvfile)
+
+        writer.writerow([
+            "company_id",
+            "year",
+            "cfo_sign",
+            "cfi_sign",
+            "cff_sign",
+            "pattern_label"
+        ])
+
+        writer.writerows(rows)
+"""
 Bluestock N100 Financial Intelligence Platform
 Sprint 5
 Day 31
@@ -1218,18 +1509,39 @@ def calculate_capital_allocation(
 def main():
 
     print_header("Sprint 5 CASH FLOW-KPI'S")
+
+    # ======================================================
     # CONNECT DATABASE
-    # ------------------------------------------------------
+    # ======================================================
+
     connection = connect_database()
+
+    # ======================================================
     # LOAD TABLES
-    # ------------------------------------------------------
+    # ======================================================
+
     companies = load_companies(connection)
     sectors = load_sectors(connection)
     cashflow = load_cashflow(connection)
     pnl = load_profit_loss(connection)
     ratios = load_ratios(connection)
-    # FILTER TO MASTER COMPANY LIST (92 COMPANIES)
-    # ------------------------------------------------------
+
+    # ======================================================
+    # NORMALIZE YEARS
+    # ======================================================
+
+    cashflow["year"] = cashflow["year"].apply(normalize_year)
+    pnl["year"] = pnl["year"].apply(normalize_year)
+
+    cashflow = cashflow.dropna(subset=["year"])
+    pnl = pnl.dropna(subset=["year"])
+
+    cashflow["year"] = cashflow["year"].astype(int)
+    pnl["year"] = pnl["year"].astype(int)
+
+    # ======================================================
+    # FILTER TO MASTER 92 COMPANIES
+    # ======================================================
 
     master_ids = set(
         companies["id"].astype(str)
@@ -1246,58 +1558,103 @@ def main():
     ratios = ratios[
         ratios["company_id"].astype(str).isin(master_ids)
     ].copy()
+
+    sectors = sectors[
+        sectors["company_id"].astype(str).isin(master_ids)
+    ].copy()
+
+    # ======================================================
+    # HISTORICAL CAPITAL ALLOCATION (SPRINT 2)
+    # ======================================================
+
+    generate_historical_capital_allocation(
+        cashflow,
+        pnl
+    )
+
+    # ======================================================
     # LATEST YEAR DATA
-    # ------------------------------------------------------
+    # ======================================================
 
     latest_cf = latest_year(cashflow)
-
     latest_ratios = latest_year(ratios)
+
+    # ======================================================
+    # DAY 31
     # CFO QUALITY
-    # ------------------------------------------------------
+    # ======================================================
 
     cfo_quality = calculate_cfo_quality(
         cashflow,
         pnl
     )
-    # Capex intensity
-    # ------------------------------------------------------    
-    capex = calculate_capex_intensity(
-    cashflow,
-    pnl,
 
-)
+    # ======================================================
+    # CAPEX INTENSITY
+    # ======================================================
+
+    capex = calculate_capex_intensity(
+        cashflow,
+        pnl
+    )
+
+    # ======================================================
+    # DISTRESS & DELEVERAGING
+    # ======================================================
+
     distress_flags, distress_alerts = calculate_distress_signals(
-    cashflow,
-    pnl,
-)
+        cashflow,
+        pnl
+    )
+
+    # ======================================================
+    # CAPITAL ALLOCATION INTELLIGENCE
+    # ======================================================
+
     capital = calculate_capital_allocation(
-    cashflow,
-    pnl,
-    ratios,
-    sectors,
-    cfo_quality,
-    capex,
-    distress_flags
-)
+        cashflow,
+        pnl,
+        ratios,
+        sectors,
+        cfo_quality,
+        capex,
+        distress_flags
+    )
+
+    # ======================================================
+    # SAVE OUTPUTS
+    # ======================================================
+
     save_excel(capital)
+
     save_distress(
         distress_alerts
-        )
+    )
+
     validate_outputs(
-    capital,
-    distress_alerts
-)
+        capital,
+        distress_alerts
+    )
+
+    # ======================================================
     # SUMMARY
+    # ======================================================
+
     print_header("DAY 31 COMPLETED")
+
     print(f"Companies               : {len(companies)}")
     print(f"CFO Quality Records     : {len(cfo_quality)}")
     print(f"CapEx Records           : {len(capex)}")
     print(f"Distress Analysis       : {len(distress_flags)}")
     print(f"Distress Alerts         : {len(distress_alerts)}")
     print(f"Capital Allocation      : {len(capital)}")
+
     print("\nGenerated Files")
     print(f"✓ {EXCEL_OUTPUT.name}")
     print(f"✓ {DISTRESS_OUTPUT.name}")
+
     connection.close()
+
+
 if __name__ == "__main__":
     main()
