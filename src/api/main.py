@@ -25,6 +25,7 @@ from src.api.routers import documents
 
 
 
+
 app = FastAPI(
 
     title="Nifty100 Financial Intelligence API",
@@ -147,6 +148,12 @@ app.include_router(
 app.include_router(
     documents.router,
     prefix=PREFIX
+)
+
+from src.api.routers import companies
+app.include_router(
+    companies.router,
+    prefix="/api/v1"
 )
 
 
