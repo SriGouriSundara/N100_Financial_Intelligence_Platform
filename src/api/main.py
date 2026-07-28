@@ -155,6 +155,52 @@ app.include_router(
     companies.router,
     prefix="/api/v1"
 )
+from src.api.routers import (
+companies,
+screener,
+sectors,
+peers,
+valuation,
+portfolio,
+documents
+)
+
+
+
+app.include_router(
+screener.router,
+prefix="/api/v1"
+)
+
+
+app.include_router(
+sectors.router,
+prefix="/api/v1"
+)
+
+
+app.include_router(
+peers.router,
+prefix="/api/v1"
+)
+
+
+app.include_router(
+valuation.router,
+prefix="/api/v1"
+)
+
+
+app.include_router(
+portfolio.router,
+prefix="/api/v1"
+)
+
+
+app.include_router(
+documents.router,
+prefix="/api/v1"
+)
 
 
 
