@@ -1,388 +1,418 @@
-# 📊 N100 Financial Intelligence Platform
+---
 
-A comprehensive financial analytics platform built using **Python, SQLite, Streamlit, Pandas, and Plotly** to analyze Nifty 100 companies. The platform provides financial ratio analysis, stock screening, peer comparison, trend visualization, capital allocation insights, and valuation analysis through an interactive dashboard.
+# N100 Financial Intelligence Platform
+
+## Project Overview
+
+The **N100 Financial Intelligence Platform** is an end-to-end financial analytics system built to analyze, screen, compare, and evaluate Nifty 100 companies using automated ETL pipelines, financial KPI calculations, machine learning analytics, REST APIs, and an interactive Streamlit dashboard.
+
+The platform transforms raw financial data into actionable investment insights through:
+
+* Automated data ingestion and validation
+* Financial ratio and KPI computation
+* Company screening engine
+* Peer comparison analytics
+* Cluster-based company profiling
+* Valuation analysis
+* REST API services
+* Interactive analyst dashboard
+* Automated testing and documentation
 
 ---
 
-# Project Overview
+# Key Features
 
-The N100 Financial Intelligence Platform is designed to transform raw financial statement data into meaningful investment insights.
+## 1. Data Engineering & ETL Pipeline
 
-The application processes historical financial data for **92 Nifty 100 companies**, computes key financial metrics, stores the processed data in SQLite, and presents interactive visualizations using Streamlit.
+The ETL pipeline processes financial datasets from Excel sources and loads validated data into SQLite.
+
+Capabilities:
+
+* Excel data ingestion
+* Data normalization
+* Schema validation
+* Data quality checks
+* Error reporting
+* Audit logging
+
+Processed datasets include:
+
+* Company master data
+* Profit & Loss statements
+* Balance Sheet data
+* Cash Flow statements
+* Financial ratios
+* Stock prices
+* Sector information
+* Peer groups
 
 ---
 
-# Objectives
+## 2. Data Quality Framework
 
-- Build a robust ETL pipeline for financial data
-- Calculate 50+ financial KPIs
-- Develop an interactive financial screener
-- Compare companies within peer groups
-- Visualize historical trends
-- Analyze capital allocation patterns
-- Perform valuation analysis
-- Deliver a production-ready Streamlit dashboard
+The platform includes automated data quality validation using 14+ DQ rules.
+
+Validation areas:
+
+* Primary key uniqueness
+* Mandatory field validation
+* Data type checks
+* Duplicate detection
+* Referential integrity
+* Financial data consistency
+
+Outputs:
+
+```
+output/
+ └── validation_failures.csv
+```
 
 ---
 
-# Technology Stack
+# 3. Financial KPI Engine
 
-| Category             | Technology    |
-| -------------------- | ------------- |
-| Programming Language | Python 3.13   |
-| Database             | SQLite        |
-| Dashboard            | Streamlit     |
-| Data Processing      | Pandas, NumPy |
-| Visualization        | Plotly        |
-| Excel Handling       | OpenPyXL      |
-| Testing              | Pytest        |
-| Version Control      | Git & GitHub  |
+The analytics engine calculates financial metrics across companies.
+
+Supported KPIs include:
+
+## Profitability Metrics
+
+* Return on Equity (ROE)
+* Return on Capital Employed (ROCE)
+* Net Profit Margin
+* Operating Profit Margin
+
+## Growth Metrics
+
+* Revenue CAGR
+* PAT CAGR
+* EPS CAGR
+
+## Leverage Metrics
+
+* Debt-to-Equity Ratio
+* Interest Coverage Ratio
+
+## Cash Flow Metrics
+
+* Free Cash Flow
+* CFO/PAT Quality
+* Capital Allocation Metrics
+
+---
+
+# 4. Company Screener Engine
+
+The screener allows analysts to identify companies based on financial conditions.
+
+Available screening presets:
+
+* Quality Compounder
+* Value Pick
+* Growth Accelerator
+* Dividend Champion
+* Debt-Free Blue Chip
+* Turnaround Watch
+
+Supported filters:
+
+* ROE
+* Debt-to-Equity
+* Free Cash Flow
+* Revenue CAGR
+* PAT CAGR
+* Sector
+* Valuation metrics
+
+---
+
+# 5. Peer Comparison Engine
+
+The platform compares companies against their peer groups.
+
+Features:
+
+* Peer group classification
+* Percentile ranking
+* Relative KPI comparison
+* Radar comparison charts
+
+Metrics compared:
+
+* ROE
+* ROCE
+* Margins
+* Growth
+* Leverage
+* Cash flow quality
+
+---
+
+# 6. Machine Learning Analytics
+
+The platform performs company clustering using KMeans.
+
+Clustering features:
+
+* ROE
+* Debt-to-Equity
+* Revenue Growth
+* Free Cash Flow Growth
+* Operating Margin
+
+Outputs:
+
+```
+output/
+ └── cluster_labels.csv
+
+reports/
+ └── elbow_plot.png
+```
+
+Example cluster profiles:
+
+* High Quality Compounders
+* Defensive Dividend Companies
+* Value Cyclicals
+* Turnaround Candidates
+* Emerging Growth Companies
+
+---
+
+# 7. FastAPI Backend
+
+The platform provides REST API access through FastAPI.
+
+API Base URL:
+
+```
+http://localhost:8000/api/v1
+```
+
+API documentation:
+
+```
+http://localhost:8000/docs
+```
+
+Available API modules:
+
+* Company information
+* Screener results
+* Sector analytics
+* Peer comparison
+* Valuation data
+* Portfolio statistics
+* Documents
+* Health monitoring
+
+---
+
+# 8. Streamlit Dashboard
+
+Interactive dashboard for financial analysts.
+
+Run:
+
+```
+streamlit run src/dashboard/app.py
+```
+
+Dashboard screens:
+
+## 1. Home Dashboard
+
+Provides:
+
+* Market overview
+* Sector distribution
+* Portfolio statistics
+
+## 2. Company Profile
+
+Displays:
+
+* Company information
+* Financial KPIs
+* Historical performance
+
+## 3. Screener
+
+Allows users to:
+
+* Apply financial filters
+* Select preset strategies
+* Export results
+
+## 4. Peer Comparison
+
+Provides:
+
+* Peer ranking
+* Relative analysis
+* Benchmark comparison
+
+## 5. Financial Trends
+
+Shows:
+
+* Revenue trends
+* Profit trends
+* KPI movement
+
+## 6. Sector Analysis
+
+Provides:
+
+* Sector comparison
+* Median KPI analysis
+
+## 7. Capital Allocation
+
+Displays:
+
+* Cash flow analysis
+* Investment efficiency
+
+## 8. Reports
+
+Provides:
+
+* PDF tearsheets
+* Exportable analytics reports
 
 ---
 
 # Project Structure
 
 ```
-N100_Financial_Intelligence_Platform
-│
-├── config/
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── db/
-│   ├── schema.sql
-│   └── nifty100.db
-│
-├── output/
-│   ├── valuation_summary.xlsx
-│   ├── valuation_flags.csv
-│   ├── screener_output.xlsx
-│   ├── peer_comparison.xlsx
-│   ├── capital_allocation.csv
-│   └── qa_test_results.csv
-│
-├── pages/
-│   ├── 01_home.py
-│   ├── 02_profile.py
-│   ├── 03_screener.py
-│   ├── 04_peers.py
-│   ├── 05_trends.py
-│   ├── 06_sectors.py
-│   ├── 07_capital.py
-│   └── 08_reports.py
-│
-├── reports/
+N100_Financial_Intelligence_Platform/
+
 │
 ├── src/
+│   ├── api/
 │   ├── analytics/
 │   ├── dashboard/
-│   ├── etl/
-│   └── screener/
+│   └── etl/
+│
+├── db/
+│   └── nifty100.db
 │
 ├── tests/
+│   ├── api/
+│   ├── etl/
+│   ├── kpi/
+│   └── dq/
 │
-├── requirements.txt
+├── output/
+│   ├── cluster_labels.csv
+│   ├── outlier_report.csv
+│   └── portfolio_stats.csv
+│
+├── reports/
+│   ├── elbow_plot.png
+│   ├── correlation_heatmap.png
+│   └── pytest_report.html
+│
+├── docs/
+│   ├── openapi.json
+│   └── analyst_guide.pdf
+│
 └── README.md
 ```
 
 ---
 
-# Features
+# Installation Setup
 
-## ETL Pipeline
-
-- Excel data ingestion
-- Data normalization
-- SQLite database creation
-- Data quality validation
-- Audit report generation
-
----
-
-## Financial Ratio Engine
-
-Computes more than 50 KPIs including:
-
-- ROE
-- ROCE
-- ROA
-- Net Profit Margin
-- Operating Profit Margin
-- Debt-to-Equity
-- Interest Coverage
-- Asset Turnover
-- Revenue CAGR
-- PAT CAGR
-- EPS CAGR
-- Free Cash Flow
-- Capital Allocation Metrics
-
----
-
-## Financial Screener
-
-Supports dynamic filtering using:
-
-- ROE
-- Debt-to-Equity
-- Revenue CAGR
-- PAT CAGR
-- Free Cash Flow
-- OPM
-- P/E
-- P/B
-- Dividend Yield
-- Interest Coverage
-
-Includes six predefined screening strategies:
-
-- Quality Compounder
-- Value Pick
-- Growth Accelerator
-- Dividend Champion
-- Debt-Free Blue Chip
-- Turnaround Watch
-
----
-
-## Peer Comparison
-
-- Peer group selection
-- Radar chart comparison
-- Percentile rankings
-- KPI comparison table
-
----
-
-## Trend Analysis
-
-- Revenue trend
-- Profit trend
-- Financial ratio trends
-- Multi-metric comparison
-- YoY growth visualization
-
----
-
-## Sector Analysis
-
-- Sector bubble chart
-- Revenue vs ROE visualization
-- Market capitalization analysis
-- Sector median KPIs
-
----
-
-## Capital Allocation
-
-Visualizes company allocation strategies using:
-
-- Treemap
-- Pattern summary
-- Company grouping
-
----
-
-## Annual Reports
-
-Provides:
-
-- Company search
-- Annual report links
-- Report availability status
-
----
-
-## Valuation Module
-
-Calculates:
-
-- FCF Yield
-- Sector Median P/E
-- P/E vs Sector Median
-- Valuation Flags
-
-Outputs:
-
-- Fair
-- Discount
-- Caution
-
----
-
-# Dashboard Screens
-
-The Streamlit dashboard contains eight interactive screens.
-
-## 1. Home
-
-Displays:
-
-- Summary KPI cards
-- Sector distribution
-- Top companies
-- Dashboard overview
-
----
-
-## 2. Company Profile
-
-Displays:
-
-- Company details
-- Financial KPIs
-- Revenue history
-- ROE / ROCE trends
-- Pros & Cons
-
----
-
-## 3. Financial Screener
-
-Displays:
-
-- Interactive filters
-- Preset screeners
-- Live filtering
-- CSV export
-
----
-
-## 4. Peer Comparison
-
-Displays:
-
-- Radar chart
-- Peer KPI comparison
-- Benchmark comparison
-
----
-
-## 5. Trend Analysis
-
-Displays:
-
-- Historical trends
-- Multiple KPI comparison
-- YoY growth
-
----
-
-## 6. Sector Analysis
-
-Displays:
-
-- Bubble chart
-- Sector KPI analysis
-- Sector medians
-
----
-
-## 7. Capital Allocation
-
-Displays:
-
-- Capital allocation treemap
-- Pattern summary
-- Company distribution
-
----
-
-## 8. Annual Reports
-
-Displays:
-
-- Annual report links
-- PDF availability
-- Report status
-
----
-
-# Dashboard Screenshots
-
-> Add screenshots after completing the project.
-
-Example:
+## Clone Repository
 
 ```
-docs/screenshots/
-
-home.png
-
-profile.png
-
-screener.png
-
-peer.png
-
-trend.png
-
-sector.png
-
-capital.png
-
-reports.png
-```
-
-Then include:
-
-```markdown
-## Home
-
-![Home](docs/screenshots/home.png)
-```
-
-Repeat for all screens.
-
----
-
-# Installation
-
-Clone the repository
-
-```bash
 git clone <repository-url>
-```
 
-Move into the project
-
-```bash
 cd N100_Financial_Intelligence_Platform
 ```
 
-Create virtual environment
+---
 
-```bash
+## Create Virtual Environment
+
+```
 python -m venv venv
 ```
 
-Activate virtual environment
+Activate:
 
-Windows
+Windows:
 
-```bash
+```
 venv\Scripts\activate
 ```
 
-Install dependencies
+---
 
-```bash
+## Install Dependencies
+
+```
 pip install -r requirements.txt
 ```
 
 ---
 
-# Running the Dashboard
+# Running the Application
 
-Start the Streamlit application
+## 1. Run ETL Pipeline
 
-```bash
+```
+python src/etl/loader.py
+```
+
+This will:
+
+* Load financial files
+* Validate data
+* Populate SQLite database
+
+---
+
+## 2. Run Analytics Modules
+
+Example:
+
+```
+python src/analytics/clustering.py
+```
+
+Generates:
+
+* Cluster labels
+* Analytics reports
+
+---
+
+## 3. Start FastAPI Server
+
+```
+uvicorn src.api.main:app --port 8000
+```
+
+Open:
+
+```
+http://localhost:8000/docs
+```
+
+---
+
+## 4. Start Streamlit Dashboard
+
+```
 streamlit run src/dashboard/app.py
 ```
 
-The application will be available at:
+Open:
 
 ```
 http://localhost:8501
@@ -390,84 +420,173 @@ http://localhost:8501
 
 ---
 
-# Output Files
+# Running Tests
 
-The project generates the following outputs:
+Run complete test suite:
 
-| File                   | Description                         |
-| ---------------------- | ----------------------------------- |
-| valuation_summary.xlsx | Valuation metrics for all companies |
-| valuation_flags.csv    | Discount & Caution companies        |
-| screener_output.xlsx   | Screener results                    |
-| peer_comparison.xlsx   | Peer comparison report              |
-| capital_allocation.csv | Capital allocation patterns         |
-| qa_test_results.csv    | QA testing results                  |
+```
+pytest tests/ -v
+```
 
----
+Generate HTML report:
 
-# Quality Assurance
+```
+pytest tests/ --html=reports/pytest_report.html --self-contained-html
+```
 
-The application includes:
+Expected result:
 
-- Unit testing
-- Integration testing
-- Missing value handling
-- Partial data handling
-- Dashboard performance testing
-- CSV validation
-- Streamlit page testing
+```
+60+ tests passed
+0 failures
+```
 
 ---
 
-# Sprint Summary
+# API Examples
 
-### Sprint 1
+## Health Check
 
-- ETL Pipeline
-- SQLite Database
-- Data Quality Rules
-
-### Sprint 2
-
-- Financial Ratio Engine
-- CAGR Engine
-- Capital Allocation
-- KPI Testing
-
-### Sprint 3
-
-- Financial Screener
-- Peer Comparison
-- Composite Scoring
-
-### Sprint 4
-
-- Streamlit Dashboard
-- Valuation Module
-- QA Testing
-- Documentation
+```
+curl http://localhost:8000/api/v1/health
+```
 
 ---
 
-# Performance
+## Get Companies
 
-- Dashboard pages load in under **3 seconds**
-- SQLite query caching implemented
-- Interactive Plotly visualizations
-- Streamlit caching for improved performance
+```
+curl http://localhost:8000/api/v1/companies
+```
+
+---
+
+## Get Company Profile
+
+```
+curl http://localhost:8000/api/v1/companies/TCS
+```
 
 ---
 
-# Future Enhancements
+## Screener Query
 
-- Live NSE/BSE market data integration
-- Portfolio tracking
-- Watchlist functionality
-- AI-based stock recommendations
-- User authentication
-- Cloud deployment
+```
+curl "http://localhost:8000/api/v1/screener?min_roe=15"
+```
 
 ---
+
+# Generated Deliverables
+
+The project generates:
+
+```
+output/
+ ├── cluster_labels.csv
+ ├── outlier_report.csv
+ └── portfolio_stats.csv
+
+
+reports/
+ ├── elbow_plot.png
+ ├── correlation_heatmap.png
+ └── pytest_report.html
+
+
+docs/
+ ├── openapi.json
+ └── analyst_guide.pdf
+```
+
+---
+
+# Code Quality Standards
+
+The project follows:
+
+* PEP8 coding standards
+* Black formatting
+* Ruff lint validation
+* Unit testing practices
+* API documentation standards
+
+Quality checks:
+
+```
+black src/ tests/
+
+ruff check src/ tests/
+
+pytest tests/
+```
+
+---
+
+# Troubleshooting
+
+## API Import Error
+
+Problem:
+
+```
+ModuleNotFoundError: No module named src
+```
+
+Solution:
+
+Run commands from project root directory.
+
+---
+
+## Database Table Missing
+
+Problem:
+
+```
+no such table error
+```
+
+Solution:
+
+Run ETL pipeline again:
+
+```
+python src/etl/loader.py
+```
+
+---
+
+## Streamlit Dashboard Not Loading
+
+Restart:
+
+```
+streamlit run src/dashboard/app.py
+```
+
+---
+
+# Project Completion Status
+
+| Module                  | Status    |
+| ----------------------- | --------- |
+| ETL Pipeline            | Completed |
+| Data Quality Framework  | Completed |
+| KPI Engine              | Completed |
+| Screener Engine         | Completed |
+| Peer Analytics          | Completed |
+| ML Clustering           | Completed |
+| FastAPI Backend         | Completed |
+| Streamlit Dashboard     | Completed |
+| API Integration Testing | Completed |
+| Documentation           | Completed |
+
+---
+
+# License
+
+Internal project use only.
 
 # Author
 
